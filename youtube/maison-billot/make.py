@@ -122,7 +122,8 @@ def plan(seg):
     add(t=s(6) + 2.95, do='click', sel='#slot-list .chip')
     add(t=s(6) + 3.4, d=.45, do='cursor', sel='#colis-go')
     add(t=s(6) + 3.95, do='click', sel='#colis-go')
-    add(t=s(6) + 4.4, d=1.2, do='scroll', to={'sel': '#recap', 'offset': -420})
+    # pas de défilement vers #recap : le récapitulatif de réservation est un bloc technique sous la caisse ; la caméra reste
+    # sur la caisse en bois (elle se remplit, le prix s'anime, le créneau est choisi), comme sur le vrai site
     # 7. langues, puis carte de fin
     add(t=s(7) + .1, d=.8, do='cursor', sel='.lang-switch a[hreflang="en"]')
     add(t=s(7) + 1.5, d=.6, do='cursor', sel='.lang-switch a[hreflang="es"]')

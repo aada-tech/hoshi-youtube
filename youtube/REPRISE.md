@@ -73,3 +73,18 @@ changements de visibilité peuvent être bloqués par le mode auto : les laisser
 - Rendu sous Linux : `render.py` lit `CHROME_BIN` et `FFMPEG_BIN` ; le Chromium d'ici ne lit pas le H.264, donc `sh webm.sh` recode `vid/*.mp4` en `vid/*.webm` et on lance avec `PROMO_VID_EXT=webm`. Ordre : `python3 audio.py --voix ar`, puis `python3 _tools/promo_batch.py sources/boutique-tigzirt/promo tiziri ar 169,45,916`.
 - Constat portfolio (hoshuko.github.io) : seules les promos de Tiziri ont une voix off (commit e1d3597) ; Billot, Tafat, Nacre et Lalla Warda sont en musique seule. Le portfolio ouvre toujours sur l'onglet « Paysage » (16:9), sans choix automatique du format sur téléphone (`assets/js/portfolio.js`).
 
+## Bugs du site Maison Billot corrigés le 29 septembre 2026 (à reporter dans les vidéos)
+
+Images de référence : `livrables/bugs-billot/` (avant / après).
+
+1. **Tiroir d'anatomie.** Avant : `openDrawer()` mettait `document.documentElement.style.overflow = 'hidden'`, ce qui cassait le `position: sticky` de la bête : elle remontait de 2 400 px hors de l'écran et le fond restait vide et gris. Après : le défilement est verrouillé sans toucher aux propriétés de `<html>` ; la bête, ses 23 morceaux, les étiquettes et les lignes restent visibles sous le voile flouté.
+2. **Réservation.** Avant : le récapitulatif était un bloc `<pre>` monospace sans mise en forme, à demi masqué par la notification, et la vidéo descendait dessus. Après : carte de commande soignée (encadré pointillé façon reçu), et dans la vidéo la caméra reste sur la caisse en bois qui se remplit, sans descendre sur le texte brut.
+
+État constaté dans ce dépôt (mis à jour ici) :
+- `youtube/maison-billot/make.py` : le défilement vers `#recap` est supprimé (la caméra reste sur la caisse). C'est la seule correction faite dans ce dépôt.
+- Le code corrigé du site (`sources/maison-billot/site/`, `build.py --export`) n'est PAS dans ce dépôt. Le dépôt public `hoshuko/maison-billot` (dernier commit du 29/09 à 02:51) contient encore les deux bugs : il faut lancer `python3 sources/maison-billot/site/build.py --export` sur le Mac puis pousser.
+
+Conséquences pour les vidéos, à traiter après l'export du site :
+- Les 4 visites Billot (FR, EN, ES, AR, filmées le 29/09 à 05:32) montrent probablement les deux bugs : à refilmer. Le minutage ne change pas (seule la dernière scène de la réservation est plus courte), donc on peut garder la même bande-son.
+- La promo Billot du portfolio : vérifier si elle réutilise des captures du tiroir ou de la réservation (dossier promo de Billot non copié dans ce dépôt) ; si oui, refaire les captures depuis le site corrigé.
+
