@@ -1,0 +1,62 @@
+{
+ "voix": "Gemini TTS (gemini-3.8-flash-tts), voix Sulafat",
+ "consigne": "[warm] [elegant] [smiling]",
+ "style": "Warm, elegant and confident voice for a premium fashion boutique advert: smooth, natural and unhurried, with a gentle smile, and a clear pause between sentences.",
+ "vitesse": 1.0,
+ "lignes": [
+  {
+   "t": 0.5,
+   "fichier": "01.wav",
+   "texte": "One photo, taken in the shop.",
+   "duree": 3.17
+  },
+  {
+   "t": 5.1,
+   "fichier": "02.wav",
+   "texte": "We cut the piece out, changing nothing.",
+   "duree": 3.22
+  },
+  {
+   "t": 10.4,
+   "fichier": "03.wav",
+   "texte": "Then Elle, our wooden mannequin, wears it… and the piece comes to life.",
+   "duree": 6.32
+  },
+  {
+   "t": 19.7,
+   "fichier": "04.wav",
+   "texte": "Tiziri. Your fashion boutique in Tigzirt, online.",
+   "duree": 4.36
+  },
+  {
+   "t": 24.5,
+   "fichier": "05.wav",
+   "texte": "Every piece in the shop is shown in motion.",
+   "duree": 3.39
+  },
+  {
+   "t": 34.1,
+   "fichier": "06.wav",
+   "texte": "On the website: the fitting room, the runway, and every piece from every angle.",
+   "duree": 5.32
+  },
+  {
+   "t": 43.3,
+   "fichier": "07.wav",
+   "texte": "In French, Arabic, English and Spanish.",
+   "duree": 4.57
+  },
+  {
+   "t": 48.17,
+   "fichier": "08.wav",
+   "texte": "Like a piece? Message us on WhatsApp: collect it in store, or get it delivered.",
+   "duree": 5.35
+  },
+  {
+   "t": 53.82,
+   "fichier": "09.wav",
+   "texte": "Tiziri. What you see here, you’ll find in the shop.",
+   "duree": 3.83
+  }
+ ]
+}

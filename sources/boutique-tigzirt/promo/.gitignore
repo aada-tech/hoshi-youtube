@@ -1,0 +1,14 @@
+# recréés par prep.py (garde-robe du site et site exporté)
+img/
+vid/
+fonts/
+site/
+data.js
+# rendus intermédiaires
+stills/
+frames_*.mp4
+compo.*.html
+cues.*.json
+render_*.log
+voix/cache/
+audio-voix-*.wav

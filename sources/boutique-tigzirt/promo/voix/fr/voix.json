@@ -1,0 +1,62 @@
+{
+ "voix": "Gemini TTS (gemini-3.8-flash-tts), voix Sulafat",
+ "consigne": "[warm] [elegant] [smiling]",
+ "style": "Warm, elegant and confident voice for a premium fashion boutique advert: smooth, natural and unhurried, with a gentle smile, and a clear pause between sentences.",
+ "vitesse": 1.0,
+ "lignes": [
+  {
+   "t": 0.5,
+   "fichier": "01.wav",
+   "texte": "Une photo, prise en boutique.",
+   "duree": 4.12
+  },
+  {
+   "t": 5.1,
+   "fichier": "02.wav",
+   "texte": "On détoure la pièce, sans rien changer.",
+   "duree": 2.98
+  },
+  {
+   "t": 10.4,
+   "fichier": "03.wav",
+   "texte": "Puis Elle, notre mannequin en bois, la porte… et la pièce prend vie.",
+   "duree": 6.26
+  },
+  {
+   "t": 19.7,
+   "fichier": "04.wav",
+   "texte": "Tiziri. Votre boutique de mode à Tigzirt, en ligne.",
+   "duree": 3.99
+  },
+  {
+   "t": 24.5,
+   "fichier": "05.wav",
+   "texte": "Chaque pièce de la boutique est présentée en mouvement.",
+   "duree": 3.43
+  },
+  {
+   "t": 34.1,
+   "fichier": "06.wav",
+   "texte": "Sur le site : l’essayage, le défilé, et chaque pièce sous tous les angles.",
+   "duree": 5.8
+  },
+  {
+   "t": 43.3,
+   "fichier": "07.wav",
+   "texte": "En français, en arabe, en anglais et en espagnol.",
+   "duree": 4.27
+  },
+  {
+   "t": 47.87,
+   "fichier": "08.wav",
+   "texte": "Une pièce vous plaît ? Écrivez-nous sur WhatsApp : retrait en boutique ou livraison.",
+   "duree": 4.74
+  },
+  {
+   "t": 53.6,
+   "fichier": "09.wav",
+   "texte": "Tiziri. Ce que vous voyez, vous le trouvez en boutique.",
+   "duree": 3.37
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+1
+00:00:00,900 --> 00:00:03,591
+Tiziri is a fashion
+boutique in Tigzirt, in
+
+2
+00:00:03,591 --> 00:00:06,094
+Kabylie, with its whole wardrobe online.
+
+3
+00:00:07,444 --> 00:00:11,360
+Elle and Lui, our wooden
+mannequins, wear every piece.
+
+4
+00:00:12,110 --> 00:00:15,154
+Every garment is photographed
+in the shop, then cut
+
+5
+00:00:15,154 --> 00:00:18,199
+out and set in the light,
+without changing a thing.
+
+6
+00:00:19,249 --> 00:00:24,714
+In the fitting room, you pick a piece:
+they try it on, then start walking.
+
+7
+00:00:26,364 --> 00:00:29,175
+Around it, the mascot
+keeps a plain ecru base
+
+8
+00:00:29,175 --> 00:00:32,235
+outfit, never for sale:
+the piece stays the star.
+
+9
+00:00:33,885 --> 00:00:37,908
+On the runway, the whole shop
+goes by, piece after piece.
+
+10
+00:00:40,358 --> 00:00:44,073
+The wardrobe sorts itself
+in one tap: dresses,
+
+11
+00:00:44,073 --> 00:00:47,142
+tops, jackets, bottoms or traditional.
+
+12
+00:00:48,592 --> 00:00:52,003
+Slide: raw photo or staging, it's the same
+
+13
+00:00:52,003 --> 00:00:55,170
+piece, the one you'll find in the shop.
+
+14
+00:00:56,920 --> 00:01:00,892
+Like a piece? Send a WhatsApp
+message: pick it up in the shop, or
+
+15
+00:01:00,892 --> 00:01:04,864
+get it delivered to any of the 58
+provinces, and pay on delivery.
+
+16
+00:01:05,314 --> 00:01:10,645
+Tiziri: the shop comes alive. This
+demo website is free and open source,
+
+17
+00:01:10,645 --> 00:01:15,901
+in French, Arabic, English and Spanish.
+The link is in the description.

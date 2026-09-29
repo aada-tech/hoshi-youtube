@@ -1,0 +1,88 @@
+1
+00:00:00,900 --> 00:00:03,526
+Tiziri, c'est une boutique
+de mode à Tigzirt,
+
+2
+00:00:03,526 --> 00:00:06,094
+en Kabylie, et toute sa
+garde-robe en ligne.
+
+3
+00:00:07,444 --> 00:00:11,360
+Elle et Lui, nos mannequins en
+bois, portent chaque pièce.
+
+4
+00:00:12,110 --> 00:00:15,315
+Chaque vêtement est
+photographié en boutique, puis
+
+5
+00:00:15,315 --> 00:00:18,199
+détouré et mis en lumière,
+sans rien changer.
+
+6
+00:00:19,249 --> 00:00:22,014
+Dans la cabine, vous
+choisissez une pièce :
+
+7
+00:00:22,014 --> 00:00:24,714
+ils l'essaient, puis se mettent en marche.
+
+8
+00:00:26,364 --> 00:00:29,138
+Autour, la mascotte
+garde une tenue de base
+
+9
+00:00:29,138 --> 00:00:32,235
+écru, jamais vendue : la
+pièce reste la vedette.
+
+10
+00:00:33,885 --> 00:00:37,908
+Au défilé, toute la boutique
+passe, pièce après pièce.
+
+11
+00:00:40,358 --> 00:00:47,142
+La garde-robe se trie en un geste : robes,
+hauts, vestes, bas ou traditionnel.
+
+12
+00:00:48,592 --> 00:00:51,916
+Glissez : photo brute ou
+mise en scène, c'est la
+
+13
+00:00:51,916 --> 00:00:55,170
+même pièce, celle que
+vous trouvez en boutique.
+
+14
+00:00:56,920 --> 00:01:00,700
+Une pièce vous plaît ? Un message
+sur WhatsApp : retrait en
+
+15
+00:01:00,700 --> 00:01:04,864
+boutique, ou livraison dans les
+58 wilayas, payée à la réception.
+
+16
+00:01:05,314 --> 00:01:08,865
+Tiziri, la boutique prend
+vie. Ce site de démonstration
+
+17
+00:01:08,865 --> 00:01:12,286
+est gratuit et open source,
+en français, en arabe, en
+
+18
+00:01:12,286 --> 00:01:15,901
+anglais et en espagnol. Le
+lien est dans la description.

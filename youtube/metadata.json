@@ -1,0 +1,431 @@
+{
+ "channel": "https://www.youtube.com/@Hosh-uko",
+ "timezone": "Europe/Paris (UTC+2 jusqu'au 25 octobre 2026)",
+ "defaults": {
+  "category": "Science et technologie",
+  "audience": "Pas conçue pour les enfants",
+  "video_language": "Français",
+  "license": "Licence YouTube standard",
+  "altered_content": "Non (voix de synthèse générique, aucune personne réelle imitée)",
+  "playlist": {
+   "fr": [
+    "Vitrines en mouvement",
+    "Des sites vitrines animés pour les commerces de proximité, gratuits et open source, en français, en anglais et en espagnol."
+   ],
+   "en": [
+    "Storefronts in motion",
+    "Scroll-animated showcase websites for local businesses, free and open source, in French, English and Spanish."
+   ],
+   "es": [
+    "Escaparates en movimiento",
+    "Webs escaparate animadas para comercios de barrio, gratuitas y de código abierto, en francés, inglés y español."
+   ],
+   "ar": [
+    "واجهات متحركة",
+    "مواقع عرض متحركة للمتاجر المحلية، مجانية ومفتوحة المصدر، بالفرنسية والإنجليزية والإسبانية."
+   ]
+  },
+  "end_screen": "20 dernières secondes : bouton S'abonner + vidéo « Meilleure pour le spectateur » (à droite de la carte de fin, qui laisse la place)."
+ },
+ "videos": [
+  {
+   "day": 1,
+   "date": "mardi 29 septembre 2026",
+   "project": "maison-billot",
+   "long": {
+    "publish": "18:00",
+    "file": "youtube/maison-billot/out/maison-billot-visite-fr.mp4",
+    "thumbnail": "youtube/maison-billot/out/maison-billot-miniature-fr.jpg",
+    "captions": [
+     "fr",
+     "en",
+     "es",
+     "ar"
+    ],
+    "title": {
+     "fr": "Un site de boucherie qui découpe le bœuf au scroll | Maison Billot",
+     "en": "A butcher website that carves up the beef as you scroll | Maison Billot",
+     "es": "Web de carnicería: el vacuno se despieza al hacer scroll | Maison Billot",
+     "ar": "موقع لمحل جزارة: الثور يُقطَّع أثناء التمرير | Maison Billot"
+    },
+    "chapters": {
+     "fr": [
+      "00:00 Des bœufs maturés sur l'os",
+      "00:17 Chaque morceau expliqué",
+      "00:29 Fait maison et cave de maturation",
+      "00:43 Commande en ligne, retrait en boutique"
+     ],
+     "en": [
+      "00:00 Beef aged on the bone",
+      "00:17 Every cut explained",
+      "00:29 House-made products and the ageing room",
+      "00:43 Order online, collect in store"
+     ],
+     "es": [
+      "00:00 Vacuno madurado con hueso",
+      "00:17 Cada pieza, explicada",
+      "00:29 Elaboraciones caseras y cámara de maduración",
+      "00:43 Pide en línea y recoge en tienda"
+     ],
+     "ar": [
+      "00:00 لحوم مُعتَّقة على العظم",
+      "00:17 شرح كل قطعة",
+      "00:29 منتجات المحل وغرفة التعتيق",
+      "00:43 اطلب عبر الإنترنت واستلم من المحل"
+     ]
+    },
+    "description": {
+     "fr": "Maison Billot est le site vitrine d'une boucherie artisanale : au défilement, le bœuf se découpe en 23 morceaux reliés à leur place, chaque morceau a sa fiche, et le client compose son colis en ligne.\n\nLe site est gratuit et open source, en français, en anglais et en espagnol.\n▶ Démo : https://hoshuko.github.io/maison-billot/\n💻 Code : https://github.com/hoshuko/maison-billot\n🎞 Toutes les maquettes : https://hoshuko.github.io/\n\nChapitres\n{chapters}\n\nCe que fait le site\n• 23 morceaux photographiés, reliés à leur zone sur la bête\n• « Vous cuisinez quoi ? » : les bons morceaux pour chaque plat\n• Merguez et kits en vue éclatée\n• Cave de maturation interactive, de J+0 à J+60\n• Colis click & collect, paiement en boutique\n• HTML, CSS et JavaScript, sans framework ni cookies\n\nMaquette de démonstration : nom, adresse, numéro et prix fictifs.\nMusique : composée pour la vidéo.\nPhotos : vache Salers © B.navez (CC BY-SA 3.0), bavette © Bortz60 (CC BY-SA 3.0), queue © FotoosVanRobin (CC BY-SA 2.0), merguez © Stanislaus der Lausige (CC BY-SA 4.0), via Wikimedia Commons, détourées ; autres photos : Unsplash. Détails : https://github.com/hoshuko/maison-billot/blob/main/CREDITS.md\n\n#SiteWeb #WebDesign #Boucherie",
+     "en": "Maison Billot is a showcase website for an artisan butcher: as you scroll, the beef separates into 23 cuts linked to their place, every cut has its own card, and customers build their order online.\n\nThe site is free and open source, in French, English and Spanish.\n▶ Demo: https://hoshuko.github.io/maison-billot/en.html\n💻 Code: https://github.com/hoshuko/maison-billot\n🎞 All the templates: https://hoshuko.github.io/en.html\n\nChapters\n{chapters}\n\nWhat the site does\n• 23 photographed cuts, each linked to its area on the animal\n• “What’s cooking?”: the right cuts for every dish\n• Merguez and kits in an exploded view\n• An interactive ageing room, from day 0 to day 60\n• Click & collect orders, paid in store\n• HTML, CSS and JavaScript, no framework, no cookies\n\nDemo template: the name, address, phone number and prices are fictional.\nMusic: composed for the video.\nPhotos: Salers cow © B.navez (CC BY-SA 3.0), bavette © Bortz60 (CC BY-SA 3.0), oxtail © FotoosVanRobin (CC BY-SA 2.0), merguez © Stanislaus der Lausige (CC BY-SA 4.0), via Wikimedia Commons, backgrounds removed; other photos: Unsplash. Details: https://github.com/hoshuko/maison-billot/blob/main/CREDITS.md\n\n#WebDesign #Website #Butcher",
+     "es": "Maison Billot es la web de una carnicería artesanal: al hacer scroll, el vacuno se divide en 23 piezas unidas a su lugar, cada pieza tiene su ficha y el cliente prepara su pedido en línea.\n\nLa web es gratuita y de código abierto, en francés, inglés y español.\n▶ Demo: https://hoshuko.github.io/maison-billot/es.html\n💻 Código: https://github.com/hoshuko/maison-billot\n🎞 Todas las maquetas: https://hoshuko.github.io/es.html\n\nCapítulos\n{chapters}\n\nQué hace la web\n• 23 piezas fotografiadas, unidas a su zona del animal\n• «¿Qué vas a cocinar?»: las piezas adecuadas para cada plato\n• Merguez y kits en vista despiezada\n• Cámara de maduración interactiva, del día 0 al día 60\n• Pedido para recoger en tienda, con pago en el local\n• HTML, CSS y JavaScript, sin frameworks ni cookies\n\nMaqueta de demostración: el nombre, la dirección, el teléfono y los precios son ficticios.\nMúsica: compuesta para el vídeo.\nFotos: vaca Salers © B.navez (CC BY-SA 3.0), vacío © Bortz60 (CC BY-SA 3.0), rabo © FotoosVanRobin (CC BY-SA 2.0), merguez © Stanislaus der Lausige (CC BY-SA 4.0), vía Wikimedia Commons, recortadas; otras fotos: Unsplash. Detalles: https://github.com/hoshuko/maison-billot/blob/main/CREDITS.md\n\n#DiseñoWeb #PáginaWeb #Carnicería",
+     "ar": "Maison Billot موقع تعريفي لمحل جزارة حِرفي: أثناء التمرير يُقطَّع الثور إلى 23 قطعة مرتبطة بمواضعها، ولكل قطعة بطاقتها، ويُعِدّ الزبون طلبيته عبر الإنترنت.\n\nالموقع مجاني ومفتوح المصدر، بالفرنسية والإنجليزية والإسبانية.\n▶ العرض: https://hoshuko.github.io/maison-billot/\n💻 الكود: https://github.com/hoshuko/maison-billot\n🎞 كل النماذج: https://hoshuko.github.io/\n\nالفصول\n{chapters}\n\nما يقدّمه الموقع\n• 23 قطعة مصوّرة، مرتبطة بموضعها على الثور\n• «ماذا ستطبخ؟»: القطع المناسبة لكل طبق\n• المرقاز والتشكيلات في عرض مفكّك\n• غرفة تعتيق تفاعلية، من اليوم 0 إلى اليوم 60\n• طلبية تُستلم من المحل، والدفع في المحل\n• HTML وCSS وJavaScript دون إطار عمل ودون ملفات تعريف الارتباط\n\nنموذج تجريبي: الاسم والعنوان والرقم والأسعار خيالية.\nالموسيقى: مؤلفة للفيديو.\nالصور: بقرة من سلالة سالير © B.navez (CC BY-SA 3.0)، بافيت © Bortz60 (CC BY-SA 3.0)، ذيل © FotoosVanRobin (CC BY-SA 2.0)، مرقاز © Stanislaus der Lausige (CC BY-SA 4.0)، عبر ويكيميديا كومنز، مع إزالة الخلفية؛ صور أخرى: Unsplash. التفاصيل: https://github.com/hoshuko/maison-billot/blob/main/CREDITS.md\n\n#تصميم_مواقع #موقع_ويب #جزارة"
+    },
+    "tags": "site vitrine, site web boucherie, boucherie, web design, animation au scroll, scroll animation, site gratuit, open source, template site web, html css javascript, butcher website, website template, free website, diseño web, web carnicería, maison billot, hoshuko",
+    "pinned_comment": "Le site est gratuit et open source 👉 https://hoshuko.github.io/maison-billot/ (EN/ES dans le sélecteur de langue). Quel commerce je fais ensuite ? Dites-le en commentaire 👇",
+    "versions": {
+     "fr": "youtube/maison-billot/out/maison-billot-visite-fr.mp4",
+     "en": "youtube/maison-billot/out/maison-billot-visite-en.mp4",
+     "es": "youtube/maison-billot/out/maison-billot-visite-es.mp4",
+     "ar": "youtube/maison-billot/out/maison-billot-visite-ar.mp4"
+    }
+   },
+   "short": {
+    "publish": "18:30",
+    "file": "archives/promos-sans-voix/maison-billot/maison-billot-promo-9x16-fr.mp4",
+    "title": {
+     "fr": "La découpe du bœuf, au scroll 🥩",
+     "en": "Beef, cut by cut, as you scroll 🥩",
+     "es": "El despiece del vacuno, al hacer scroll 🥩",
+     "ar": "تقطيع الثور أثناء التمرير 🥩"
+    },
+    "description": {
+     "fr": "Maison Billot, un site vitrine de boucherie gratuit et open source : https://hoshuko.github.io/maison-billot/\n#Shorts #SiteWeb #WebDesign",
+     "en": "Maison Billot, a free and open-source butcher website: https://hoshuko.github.io/maison-billot/en.html\n#Shorts #WebDesign #Website",
+     "es": "Maison Billot, una web de carnicería gratuita y de código abierto: https://hoshuko.github.io/maison-billot/es.html\n#Shorts #DiseñoWeb #PáginaWeb",
+     "ar": "Maison Billot، موقع مجاني ومفتوح المصدر لمحل جزارة: https://hoshuko.github.io/maison-billot/\n#Shorts #تصميم_مواقع #موقع_ويب"
+    },
+    "related_video": "la vidéo longue du jour",
+    "statut": "non publié : promo sans voix off (archivée)"
+   }
+  },
+  {
+   "day": 2,
+   "date": "mercredi 30 septembre 2026",
+   "project": "tafat",
+   "long": {
+    "publish": "18:00",
+    "file": "youtube/tafat/out/tafat-visite-fr.mp4",
+    "thumbnail": "youtube/tafat/out/tafat-miniature-fr.jpg",
+    "title": {
+     "fr": "Un site de ménage où la vitre se nettoie au scroll | Tafat, Tigzirt",
+     "en": "A cleaning website where the window gets cleaned as you scroll | Tafat",
+     "es": "Web de limpieza: el cristal se limpia al hacer scroll | Tafat",
+     "ar": "موقع لخدمات التنظيف: الزجاج يُنظَّف أثناء التمرير | تافات، تيقزيرت"
+    },
+    "chapters": {
+     "fr": [
+      "00:00 Une équipe de femmes à Tigzirt",
+      "00:14 Toutes les prestations, produits fournis",
+      "00:32 Pièce par pièce et devis WhatsApp",
+      "00:48 Maisons d'été : prête avant votre arrivée"
+     ],
+     "en": [
+      "00:00 A team of women in Tigzirt",
+      "00:14 Every service, supplies included",
+      "00:32 Room by room, and a WhatsApp quote",
+      "00:48 Summer homes, ready before you arrive"
+     ],
+     "es": [
+      "00:00 Un equipo de mujeres en Tigzirt",
+      "00:14 Todos los servicios, productos incluidos",
+      "00:32 Estancia por estancia y presupuesto por WhatsApp",
+      "00:48 Casas de verano, listas antes de que llegues"
+     ],
+     "ar": [
+      "00:00 فريق من النساء في تيقزيرت",
+      "00:14 كل الخدمات، مع المنتجات",
+      "00:32 غرفة بعد غرفة وعرض سعر عبر واتساب",
+      "00:48 منازل الصيف جاهزة قبل وصولك"
+     ]
+    },
+    "description": {
+     "fr": "Tafat est le site d'une équipe de femmes qui fait le ménage à domicile à Tigzirt, en Kabylie : au défilement, une raclette nettoie la baie vitrée et la mer apparaît. Le seau s'ouvre en vue éclatée, chaque pièce a sa checklist, et le devis rédige le message WhatsApp.\n\nLe site est gratuit et open source, en français, en anglais et en espagnol.\n▶ Démo : https://hoshuko.github.io/tafat/\n💻 Code : https://github.com/hoshuko/tafat\n🎞 Toutes les maquettes : https://hoshuko.github.io/\n\nChapitres\n{chapters}\n\nCe que fait le site\n• La vitre nettoyée à la raclette, au défilement\n• Tout ce que l'équipe apporte, en vue éclatée\n• Checklist pièce par pièce et code couleur des microfibres\n• Devis en 30 secondes qui rédige le message WhatsApp\n• Maisons d'été : tout est prêt avant votre arrivée\n• HTML, CSS et JavaScript, sans framework ni cookies\n\nMaquette de démonstration : nom, numéro, prix et avis fictifs.\nMusique : composée pour la vidéo.\nPhotos : Tigzirt © Fayeqalnatour (CC BY-SA 4.0), plage de Tamda Ouguemoun © Yazid Leharani (CC BY-SA 3.0), ruines romaines © MohAdm (CC BY-SA 4.0), via Wikimedia Commons ; autres photos : Unsplash, Pexels. Détails : https://github.com/hoshuko/tafat/blob/main/CREDITS.md\n\n#SiteWeb #WebDesign #Tigzirt",
+     "en": "Tafat is the website of a women-run team that cleans homes in Tigzirt, in Kabylia: as you scroll, a squeegee wipes the picture window clean and the sea appears. The bucket opens in an exploded view, every room has its checklist, and the quote builder writes the WhatsApp message.\n\nThe site is free and open source, in French, English and Spanish.\n▶ Demo: https://hoshuko.github.io/tafat/en.html\n💻 Code: https://github.com/hoshuko/tafat\n🎞 All the templates: https://hoshuko.github.io/en.html\n\nChapters\n{chapters}\n\nWhat the site does\n• The window, wiped clean by a squeegee as you scroll\n• Everything the team brings, in an exploded view\n• Room-by-room checklist and the microfibre colour code\n• A 30-second quote that writes the WhatsApp message\n• Summer homes: everything ready before you arrive\n• HTML, CSS and JavaScript, no framework, no cookies\n\nDemo template: the name, phone number, prices and reviews are fictional.\nMusic: composed for the video.\nPhotos: Tigzirt © Fayeqalnatour (CC BY-SA 4.0), Tamda Ouguemoun beach © Yazid Leharani (CC BY-SA 3.0), Roman ruins © MohAdm (CC BY-SA 4.0), via Wikimedia Commons; other photos: Unsplash, Pexels. Details: https://github.com/hoshuko/tafat/blob/main/CREDITS.md\n\n#WebDesign #Website #Algeria",
+     "es": "Tafat es la web de un equipo de mujeres que limpia casas en Tigzirt, en Cabilia: al hacer scroll, una rasqueta limpia el ventanal y aparece el mar. El cubo se abre en vista despiezada, cada estancia tiene su lista y el presupuesto redacta el mensaje de WhatsApp.\n\nLa web es gratuita y de código abierto, en francés, inglés y español.\n▶ Demo: https://hoshuko.github.io/tafat/es.html\n💻 Código: https://github.com/hoshuko/tafat\n🎞 Todas las maquetas: https://hoshuko.github.io/es.html\n\nCapítulos\n{chapters}\n\nQué hace la web\n• El cristal, limpio con rasqueta al hacer scroll\n• Todo lo que lleva el equipo, en vista despiezada\n• Lista estancia por estancia y código de colores de las microfibras\n• Presupuesto en 30 segundos que redacta el mensaje de WhatsApp\n• Casas de verano: todo listo antes de que llegues\n• HTML, CSS y JavaScript, sin frameworks ni cookies\n\nMaqueta de demostración: el nombre, el teléfono, los precios y las opiniones son ficticios.\nMúsica: compuesta para el vídeo.\nFotos: Tigzirt © Fayeqalnatour (CC BY-SA 4.0), playa de Tamda Ouguemoun © Yazid Leharani (CC BY-SA 3.0), ruinas romanas © MohAdm (CC BY-SA 4.0), vía Wikimedia Commons; otras fotos: Unsplash, Pexels. Detalles: https://github.com/hoshuko/tafat/blob/main/CREDITS.md\n\n#DiseñoWeb #PáginaWeb #Argelia",
+     "ar": "تافات موقع لفريق من النساء يقدّم خدمات التنظيف المنزلي في تيقزيرت بمنطقة القبائل: أثناء التمرير تُنظّف الممسحة الزجاج فيظهر البحر، وينفتح الدلو ليعرض كل ما يحمله الفريق، ولكل غرفة قائمة مهامها، وتكتب أداة التسعير رسالة واتساب تلقائيًا.\n\nالموقع مجاني ومفتوح المصدر، بالفرنسية والإنجليزية والإسبانية.\n▶ العرض: https://hoshuko.github.io/tafat/\n💻 الكود: https://github.com/hoshuko/tafat\n🎞 كل النماذج: https://hoshuko.github.io/\n\nالفصول\n{chapters}\n\nما يقدّمه الموقع\n• زجاج يُنظَّف بالممسحة أثناء التمرير\n• كل ما يحمله الفريق في عرض مفكّك\n• قائمة مهام لكل غرفة ورموز ألوان لقطع الميكروفايبر\n• عرض سعر في 30 ثانية يكتب رسالة واتساب\n• منازل الصيف: كل شيء جاهز قبل وصولك\n• HTML وCSS وJavaScript دون إطار عمل ودون ملفات تعريف الارتباط\n\nنموذج تجريبي: الاسم والرقم والأسعار والتقييمات خيالية.\nالموسيقى: مؤلفة للفيديو.\nالصور: تيقزيرت © Fayeqalnatour (CC BY-SA 4.0)، شاطئ تامدة أوقمون © Yazid Leharani (CC BY-SA 3.0)، الآثار الرومانية © MohAdm (CC BY-SA 4.0)، عبر ويكيميديا كومنز؛ صور أخرى: Unsplash وPexels. التفاصيل: https://github.com/hoshuko/tafat/blob/main/CREDITS.md\n\n#تصميم_مواقع #موقع_ويب #الجزائر"
+    },
+    "tags": "site vitrine, site web ménage, ménage à domicile, Tigzirt, Kabylie, Algérie, web design, animation au scroll, site gratuit, open source, template site web, cleaning website, website template, diseño web, موقع تنظيف, تيقزيرت, tafat, hoshuko",
+    "pinned_comment": "Le site est gratuit et open source 👉 https://hoshuko.github.io/tafat/ · الموقع مجاني ومفتوح المصدر. Quel commerce je fais ensuite ? 👇",
+    "captions": [
+     "fr",
+     "en",
+     "es",
+     "ar"
+    ],
+    "versions": {
+     "fr": "youtube/tafat/out/tafat-visite-fr.mp4",
+     "en": "youtube/tafat/out/tafat-visite-en.mp4",
+     "es": "youtube/tafat/out/tafat-visite-es.mp4",
+     "ar": "youtube/tafat/out/tafat-visite-ar.mp4"
+    }
+   },
+   "short": {
+    "publish": "18:30",
+    "file": "archives/promos-sans-voix/tafat/tafat-promo-9x16-fr.mp4",
+    "title": {
+     "fr": "La vitre se nettoie au scroll ✨",
+     "en": "The window cleans itself as you scroll ✨",
+     "es": "El cristal se limpia al hacer scroll ✨",
+     "ar": "الزجاج يُنظَّف أثناء التمرير ✨"
+    },
+    "description": {
+     "fr": "Tafat, un site de ménage à domicile à Tigzirt, gratuit et open source : https://hoshuko.github.io/tafat/\n#Shorts #SiteWeb #Tigzirt",
+     "en": "Tafat, a free and open-source home cleaning website: https://hoshuko.github.io/tafat/en.html\n#Shorts #WebDesign #Website",
+     "es": "Tafat, una web de limpieza a domicilio gratuita y de código abierto: https://hoshuko.github.io/tafat/es.html\n#Shorts #DiseñoWeb #PáginaWeb",
+     "ar": "تافات، موقع مجاني ومفتوح المصدر لخدمات التنظيف المنزلي في تيقزيرت: https://hoshuko.github.io/tafat/\n#Shorts #تصميم_مواقع #الجزائر"
+    },
+    "related_video": "la vidéo longue du jour",
+    "statut": "non publié : promo sans voix off (archivée)"
+   }
+  },
+  {
+   "day": 3,
+   "date": "jeudi 1er octobre 2026",
+   "project": "atelier-nacre",
+   "long": {
+    "publish": "18:00",
+    "file": "youtube/atelier-nacre/out/atelier-nacre-visite-fr.mp4",
+    "thumbnail": "youtube/atelier-nacre/out/atelier-nacre-miniature-fr.jpg",
+    "title": {
+     "fr": "Un site d'onglerie : la pose en 6 couches au scroll | Atelier Nacre",
+     "en": "A nail salon website: a gel set in 6 layers as you scroll | Atelier Nacre",
+     "es": "Web de uñas: la manicura en 6 capas al hacer scroll | Atelier Nacre",
+     "ar": "موقع لصالون أظافر: طلاء الجل في 6 طبقات أثناء التمرير | Atelier Nacre"
+    },
+    "chapters": {
+     "fr": [
+      "00:00 Une pose en six couches",
+      "00:23 Essayer les teintes et les finitions",
+      "00:36 Formes, galerie et tarifs",
+      "00:49 Réserver en ligne, sans acompte"
+     ],
+     "en": [
+      "00:00 A gel set in six layers",
+      "00:23 Try shades and finishes",
+      "00:36 Shapes, gallery and prices",
+      "00:49 Book online, no deposit"
+     ],
+     "es": [
+      "00:00 Una manicura en seis capas",
+      "00:23 Prueba tonos y acabados",
+      "00:36 Formas, galería y tarifas",
+      "00:49 Reserva en línea, sin señal"
+     ],
+     "ar": [
+      "00:00 طلاء من ست طبقات",
+      "00:23 تجربة الألوان واللمسات النهائية",
+      "00:36 الأشكال والمعرض والأسعار",
+      "00:49 الحجز عبر الإنترنت دون عربون"
+     ]
+    },
+    "description": {
+     "fr": "Atelier Nacre est le site d'une prothésiste ongulaire à Bordeaux : au défilement, la page zoome sur l'ongle et la pose en gel se sépare en six couches, avec la durée de chacune. On essaie les teintes sur la photo d'une main, on choisit sa forme d'ongle et on réserve en ligne.\n\nLe site est gratuit et open source, en français, en anglais et en espagnol.\n▶ Démo : https://hoshuko.github.io/atelier-nacre/\n💻 Code : https://github.com/hoshuko/atelier-nacre\n🎞 Toutes les maquettes : https://hoshuko.github.io/\n\nChapitres\n{chapters}\n\nCe que fait le site\n• Anatomie d'une pose en 6 couches, en 3D\n• Essayage : 12 teintes et 4 finitions, reflets conservés\n• 5 formes d'ongle qui se transforment\n• Galerie filtrable, tarifs et protocole d'hygiène\n• Réservation via Planity, Treatwell, Booksy, Calendly ou Instagram\n• HTML, CSS et JavaScript, sans framework ni cookies\n\nMaquette de démonstration : nom, adresse, numéro, prix et avis fictifs.\nMusique : composée pour la vidéo.\nPhotos : Unsplash et Pexels. Détails : https://github.com/hoshuko/atelier-nacre/blob/main/CREDITS.md\n\n#SiteWeb #WebDesign #NailArt",
+     "en": "Atelier Nacre is the website of a nail technician in Bordeaux: as you scroll, the page zooms in on a nail and the gel set comes apart into six layers, each with its timing. Visitors try shades on the photo of a hand, choose their nail shape and book online.\n\nThe site is free and open source, in French, English and Spanish.\n▶ Demo: https://hoshuko.github.io/atelier-nacre/en.html\n💻 Code: https://github.com/hoshuko/atelier-nacre\n🎞 All the templates: https://hoshuko.github.io/en.html\n\nChapters\n{chapters}\n\nWhat the site does\n• Anatomy of a gel set in 6 layers, in 3D\n• Colour try-on: 12 shades and 4 finishes, reflections kept\n• 5 nail shapes that morph into one another\n• Filterable gallery, price list and hygiene protocol\n• Booking via Planity, Treatwell, Booksy, Calendly or Instagram\n• HTML, CSS and JavaScript, no framework, no cookies\n\nDemo template: the name, address, phone number, prices and reviews are fictional.\nMusic: composed for the video.\nPhotos: Unsplash and Pexels. Details: https://github.com/hoshuko/atelier-nacre/blob/main/CREDITS.md\n\n#WebDesign #Website #NailArt",
+     "es": "Atelier Nacre es la web de una técnica de uñas en Burdeos: al hacer scroll, la página se acerca a la uña y la manicura de gel se separa en seis capas, con la duración de cada una. Se prueban tonos sobre la foto de una mano, se elige la forma de uña y se reserva en línea.\n\nLa web es gratuita y de código abierto, en francés, inglés y español.\n▶ Demo: https://hoshuko.github.io/atelier-nacre/es.html\n💻 Código: https://github.com/hoshuko/atelier-nacre\n🎞 Todas las maquetas: https://hoshuko.github.io/es.html\n\nCapítulos\n{chapters}\n\nQué hace la web\n• Anatomía de una manicura en 6 capas, en 3D\n• Probador: 12 tonos y 4 acabados, con sus reflejos\n• 5 formas de uña que se transforman\n• Galería filtrable, precios y protocolo de higiene\n• Reservas por Planity, Treatwell, Booksy, Calendly o Instagram\n• HTML, CSS y JavaScript, sin frameworks ni cookies\n\nMaqueta de demostración: el nombre, la dirección, el teléfono, los precios y las opiniones son ficticios.\nMúsica: compuesta para el vídeo.\nFotos: Unsplash y Pexels. Detalles: https://github.com/hoshuko/atelier-nacre/blob/main/CREDITS.md\n\n#DiseñoWeb #PáginaWeb #Uñas",
+     "ar": "Atelier Nacre موقع خبيرة تجميل الأظافر في بوردو: أثناء التمرير تقترب الصفحة من الظفر، وينفصل طلاء الجل إلى ست طبقات مع مدة كل طبقة. تُجرَّب الألوان على صورة يد، ويُختار شكل الظفر، ويُحجز الموعد عبر الإنترنت.\n\nالموقع مجاني ومفتوح المصدر، بالفرنسية والإنجليزية والإسبانية.\n▶ العرض: https://hoshuko.github.io/atelier-nacre/\n💻 الكود: https://github.com/hoshuko/atelier-nacre\n🎞 كل النماذج: https://hoshuko.github.io/\n\nالفصول\n{chapters}\n\nما يقدّمه الموقع\n• تشريح طلاء من 6 طبقات، بتقنية ثلاثية الأبعاد\n• تجربة افتراضية: 12 لونًا و4 لمسات نهائية مع الحفاظ على اللمعان\n• 5 أشكال للأظافر تتحوّل من شكل إلى آخر\n• معرض قابل للتصفية، والأسعار، وبروتوكول النظافة\n• الحجز عبر Planity أو Treatwell أو Booksy أو Calendly أو Instagram\n• HTML وCSS وJavaScript دون إطار عمل ودون ملفات تعريف الارتباط\n\nنموذج تجريبي: الاسم والعنوان والرقم والأسعار والتقييمات خيالية.\nالموسيقى: مؤلفة للفيديو.\nالصور: Unsplash وPexels. التفاصيل: https://github.com/hoshuko/atelier-nacre/blob/main/CREDITS.md\n\n#تصميم_مواقع #موقع_ويب #أظافر"
+    },
+    "tags": "site vitrine, site onglerie, prothésiste ongulaire, nail art, web design, animation au scroll, site gratuit, open source, template site web, html css javascript, nail salon website, website template, diseño web, web uñas, atelier nacre, hoshuko",
+    "pinned_comment": "Le site est gratuit et open source 👉 https://hoshuko.github.io/atelier-nacre/ Quel commerce je fais ensuite ? 👇",
+    "captions": [
+     "fr",
+     "en",
+     "es",
+     "ar"
+    ],
+    "versions": {
+     "fr": "youtube/atelier-nacre/out/atelier-nacre-visite-fr.mp4",
+     "en": "youtube/atelier-nacre/out/atelier-nacre-visite-en.mp4",
+     "es": "youtube/atelier-nacre/out/atelier-nacre-visite-es.mp4",
+     "ar": "youtube/atelier-nacre/out/atelier-nacre-visite-ar.mp4"
+    }
+   },
+   "short": {
+    "publish": "18:30",
+    "file": "archives/promos-sans-voix/atelier-nacre/atelier-nacre-promo-9x16-fr.mp4",
+    "title": {
+     "fr": "Une pose d'ongles, couche par couche 💅",
+     "en": "A gel set, layer by layer 💅",
+     "es": "Una manicura, capa a capa 💅",
+     "ar": "طلاء الأظافر، طبقة بعد طبقة 💅"
+    },
+    "description": {
+     "fr": "Atelier Nacre, un site d'onglerie gratuit et open source : https://hoshuko.github.io/atelier-nacre/\n#Shorts #SiteWeb #NailArt",
+     "en": "Atelier Nacre, a free and open-source nail salon website: https://hoshuko.github.io/atelier-nacre/en.html\n#Shorts #WebDesign #NailArt",
+     "es": "Atelier Nacre, una web de uñas gratuita y de código abierto: https://hoshuko.github.io/atelier-nacre/es.html\n#Shorts #DiseñoWeb #Uñas",
+     "ar": "Atelier Nacre، موقع مجاني ومفتوح المصدر لصالون أظافر: https://hoshuko.github.io/atelier-nacre/\n#Shorts #تصميم_مواقع #أظافر"
+    },
+    "related_video": "la vidéo longue du jour",
+    "statut": "non publié : promo sans voix off (archivée)"
+   }
+  },
+  {
+   "day": 4,
+   "date": "vendredi 2 octobre 2026",
+   "project": "lalla-warda",
+   "long": {
+    "publish": "18:00",
+    "file": "youtube/lalla-warda/out/lalla-warda-visite-fr.mp4",
+    "thumbnail": "youtube/lalla-warda/out/lalla-warda-miniature-fr.jpg",
+    "title": {
+     "fr": "Un site de cosmétiques naturels : la rose qui devient flacon | Lalla Warda",
+     "en": "A natural skincare website: the rose that becomes a bottle | Lalla Warda",
+     "es": "Web de cosmética natural: la rosa que se convierte en frasco | Lalla Warda",
+     "ar": "موقع لمستحضرات التجميل الطبيعية: وردة تتحوّل إلى قارورة | Lalla Warda"
+    },
+    "chapters": {
+     "fr": [
+      "00:00 Une marque née d'une rose, à Kénitra",
+      "00:21 Textures, rituel visage et soin des cheveux",
+      "00:46 Huit soins et une routine en 3 questions",
+      "01:01 Commande WhatsApp et livraison partout au Maroc"
+     ],
+     "en": [
+      "00:00 A brand born of a rose, in Kenitra",
+      "00:21 Textures, face ritual and hair care",
+      "00:49 Eight products and a 3-question routine",
+      "01:05 WhatsApp orders and delivery across Morocco"
+     ],
+     "es": [
+      "00:00 Una marca nacida de una rosa, en Kenitra",
+      "00:20 Texturas, ritual facial y cuidado del cabello",
+      "00:52 Ocho productos y una rutina en 3 preguntas",
+      "01:07 Pedidos por WhatsApp y envíos a todo Marruecos"
+     ],
+     "ar": [
+      "00:00 علامة وُلدت من وردة في القنيطرة",
+      "00:22 القوامات وطقوس الوجه والعناية بالشعر",
+      "00:50 ثمانية منتجات وروتين في 3 أسئلة",
+      "01:05 الطلب عبر واتساب والتوصيل إلى كل المغرب"
+     ]
+    },
+    "description": {
+     "fr": "Lalla Warda est une marque de soins naturels de Kénitra, née de l'eau de rose d'une grand-mère : huiles, baumes, argile et eaux florales pour le visage et les cheveux, faits d'argan, de rose de Damas, de figue de barbarie et de fleur d'oranger du Maroc. Huit soins, un rituel visage en dix minutes, une routine en trois questions, et la commande sur WhatsApp avec paiement à la livraison.\n\nLe site est gratuit et open source, en français, en anglais, en espagnol et en arabe.\n▶ Démo : https://hoshuko.github.io/lalla-warda/\n💻 Code : https://github.com/hoshuko/lalla-warda\n🎞 Toutes les maquettes : https://hoshuko.github.io/\n\nChapitres\n{chapters}\n\nCe que fait le site\n• Une rose en 3D qui s'ouvre sur le flacon et ses ingrédients\n• Les textures essayées sur une vraie peau\n• Le rituel visage pas à pas, et un cheveu au microscope\n• Huit soins avec leur composition complète et une vue éclatée en 3D\n• Une routine en trois questions et un panier qui rédige la commande WhatsApp\n• Quatre langues, dont l'arabe de droite à gauche ; Three.js, sans cookies\n\nMaquette de démonstration : marque, fondatrice, prix, numéro et avis fictifs.\nMusique : composée pour la vidéo.\nPhotos : Unsplash et Wikimedia Commons. Détails : https://github.com/hoshuko/lalla-warda/blob/main/CREDITS.md\n\n#SiteWeb #Cosmétiques #Maroc",
+     "en": "Lalla Warda is a natural skincare brand from Kenitra, born of a grandmother's rose water: oils, balms, clay and floral waters for the face and hair, made with argan, Damask rose, prickly pear and orange blossom from Morocco. Eight products, a ten-minute face ritual, a three-question routine finder, and orders on WhatsApp with payment on delivery.\n\nThe site is free and open source, in French, English, Spanish and Arabic.\n▶ Demo: https://hoshuko.github.io/lalla-warda/en.html\n💻 Code: https://github.com/hoshuko/lalla-warda\n🎞 All the templates: https://hoshuko.github.io/en.html\n\nChapters\n{chapters}\n\nWhat the site does\n• A 3D rose that opens onto the bottle and its ingredients\n• Textures tried on real skin\n• The face ritual step by step, and a hair under the microscope\n• Eight products with full ingredient lists and a 3D exploded view\n• A three-question routine and a cart that writes the WhatsApp order\n• Four languages, including right-to-left Arabic; Three.js, no cookies\n\nDemo template: the brand, founder, prices, phone number and reviews are fictional.\nMusic: composed for the video.\nPhotos: Unsplash and Wikimedia Commons. Details: https://github.com/hoshuko/lalla-warda/blob/main/CREDITS.md\n\n#WebDesign #Skincare #Morocco",
+     "es": "Lalla Warda es una marca de cosmética natural de Kenitra, nacida del agua de rosas de una abuela: aceites, bálsamos, arcilla y aguas florales para el rostro y el cabello, con argán, rosa de Damasco, higo chumbo y flor de azahar de Marruecos. Ocho productos, un ritual facial de diez minutos, una rutina en tres preguntas y pedidos por WhatsApp con pago contra reembolso.\n\nLa web es gratuita y de código abierto, en francés, inglés, español y árabe.\n▶ Demo: https://hoshuko.github.io/lalla-warda/es.html\n💻 Código: https://github.com/hoshuko/lalla-warda\n🎞 Todas las maquetas: https://hoshuko.github.io/es.html\n\nCapítulos\n{chapters}\n\nQué hace la web\n• Una rosa en 3D que se abre hasta el frasco y sus ingredientes\n• Las texturas probadas sobre una piel real\n• El ritual facial paso a paso y un cabello al microscopio\n• Ocho productos con su composición completa y una vista despiezada en 3D\n• Una rutina en tres preguntas y un carrito que redacta el pedido de WhatsApp\n• Cuatro idiomas, con el árabe de derecha a izquierda; Three.js, sin cookies\n\nMaqueta de demostración: la marca, la fundadora, los precios, el teléfono y las opiniones son ficticios.\nMúsica: compuesta para el vídeo.\nFotos: Unsplash y Wikimedia Commons. Detalles: https://github.com/hoshuko/lalla-warda/blob/main/CREDITS.md\n\n#DiseñoWeb #Cosmética #Marruecos",
+     "ar": "لالة وردة علامة لمستحضرات العناية الطبيعية من القنيطرة، وُلدت من ماء ورد جدّة: زيوت وبلاسم وطين ومياه زهور للوجه والشعر، من الأركان والورد الدمشقي والتين الشوكي وزهر البرتقال المغربي. ثمانية منتجات، وطقس للوجه في عشر دقائق، وروتين في ثلاثة أسئلة، والطلب عبر واتساب مع الدفع عند الاستلام.\n\nالموقع مجاني ومفتوح المصدر، بالفرنسية والإنجليزية والإسبانية والعربية.\n▶ العرض: https://hoshuko.github.io/lalla-warda/ar.html\n💻 الكود: https://github.com/hoshuko/lalla-warda\n🎞 كل النماذج: https://hoshuko.github.io/\n\nالفصول\n{chapters}\n\nما يقدّمه الموقع\n• وردة ثلاثية الأبعاد تتفتّح عن القارورة ومكوّناتها\n• القوامات مجرّبة على بشرة حقيقية\n• طقوس الوجه خطوة بخطوة، وشعرة تحت المجهر\n• ثمانية منتجات بتركيباتها الكاملة وعرض مفكّك ثلاثي الأبعاد\n• روتين في ثلاثة أسئلة وسلة تكتب طلب واتساب\n• أربع لغات، منها العربية من اليمين إلى اليسار؛ Three.js دون ملفات تعريف الارتباط\n\nنموذج تجريبي: العلامة والمؤسِّسة والأسعار والرقم والآراء خيالية.\nالموسيقى: مؤلفة للفيديو.\nالصور: Unsplash وويكيميديا كومنز. التفاصيل: https://github.com/hoshuko/lalla-warda/blob/main/CREDITS.md\n\n#تصميم_مواقع #مستحضرات_تجميل #المغرب"
+    },
+    "tags": "site vitrine, site cosmétique, cosmétiques naturels, maroc, kénitra, eau de rose, huile d'argan, web design, animation au scroll, three.js, webgl, site gratuit, open source, template site web, skincare website, natural cosmetics, website template, diseño web, cosmética natural, lalla warda, hoshuko",
+    "pinned_comment": "Le site est gratuit et open source 👉 https://hoshuko.github.io/lalla-warda/ Quel commerce je fais ensuite ? 👇",
+    "captions": [
+     "fr",
+     "en",
+     "es",
+     "ar"
+    ],
+    "versions": {
+     "fr": "youtube/lalla-warda/out/lalla-warda-visite-fr.mp4",
+     "en": "youtube/lalla-warda/out/lalla-warda-visite-en.mp4",
+     "es": "youtube/lalla-warda/out/lalla-warda-visite-es.mp4",
+     "ar": "youtube/lalla-warda/out/lalla-warda-visite-ar.mp4"
+    }
+   },
+   "short": {
+    "publish": "18:30",
+    "file": "archives/promos-sans-voix/lalla-warda/lalla-warda-promo-9x16-fr.mp4",
+    "title": {
+     "fr": "Une rose qui devient un flacon 🌹",
+     "en": "A rose that becomes a bottle 🌹",
+     "es": "Una rosa que se convierte en frasco 🌹",
+     "ar": "وردة تتحوّل إلى قارورة 🌹"
+    },
+    "description": {
+     "fr": "Lalla Warda, un site de cosmétiques naturels gratuit et open source : https://hoshuko.github.io/lalla-warda/\n#Shorts #SiteWeb #Cosmétiques",
+     "en": "Lalla Warda, a free and open-source natural skincare website: https://hoshuko.github.io/lalla-warda/en.html\n#Shorts #WebDesign #Skincare",
+     "es": "Lalla Warda, una web de cosmética natural gratuita y de código abierto: https://hoshuko.github.io/lalla-warda/es.html\n#Shorts #DiseñoWeb #Cosmética",
+     "ar": "لالة وردة، موقع مجاني ومفتوح المصدر لمستحضرات التجميل الطبيعية: https://hoshuko.github.io/lalla-warda/ar.html\n#Shorts #تصميم_مواقع #مستحضرات_تجميل"
+    },
+    "related_video": "la vidéo longue du jour",
+    "statut": "non publié : promo sans voix off (archivée)"
+   }
+  },
+  {
+   "day": 5,
+   "date": "samedi 3 octobre 2026",
+   "project": "tiziri",
+   "long": {
+    "publish": "18:00",
+    "file": "youtube/tiziri/out/tiziri-visite-fr.mp4",
+    "thumbnail": "youtube/tiziri/out/tiziri-miniature-fr.jpg",
+    "title": {
+     "fr": "Un site de mode où des mannequins en bois essaient chaque pièce | Tiziri",
+     "en": "A fashion website where wooden mannequins try on every piece | Tiziri",
+     "es": "Web de moda: maniquíes de madera se prueban cada prenda | Tiziri",
+     "ar": "موقع أزياء: عارضان من الخشب يجرّبان كل قطعة | Tiziri"
+    },
+    "chapters": {
+     "fr": [
+      "00:00 Une boutique de mode à Tigzirt et ses mannequins en bois",
+      "00:11 De la photo en boutique à la cabine d’essayage",
+      "00:33 Le défilé, la garde-robe et l’avant / après",
+      "00:56 Commande WhatsApp, retrait ou livraison dans les 58 wilayas"
+     ],
+     "en": [
+      "00:00 A fashion boutique in Tigzirt and its wooden mannequins",
+      "00:10 From the shop photo to the fitting room",
+      "00:30 The runway, the wardrobe and the before / after",
+      "00:50 WhatsApp orders, in-store pickup or delivery"
+     ],
+     "es": [
+      "00:00 Una tienda de moda en Tigzirt y sus maniquíes de madera",
+      "00:12 De la foto en la tienda al probador",
+      "00:34 El desfile, el armario y el antes / después",
+      "00:57 Pedidos por WhatsApp, recogida o envío"
+     ],
+     "ar": [
+      "00:00 محل أزياء في تيقزيرت وعارضاه الخشبيان",
+      "00:12 من صورة المحل إلى غرفة القياس",
+      "00:36 عرض الأزياء وخزانة الملابس وقبل / بعد",
+      "01:00 الطلب عبر واتساب، الاستلام أو التوصيل"
+     ]
+    },
+    "description": {
+     "fr": "Tiziri est une boutique de mode à Tigzirt, en Kabylie. Chaque vêtement est photographié tel quel en boutique, détouré sans rien changer, puis porté par Elle et Lui, deux mannequins articulés en bois qui prennent la pose et se mettent en marche. Cabine d'essayage, défilé de toute la boutique, garde-robe triée en un geste, et la commande sur WhatsApp : retrait en boutique ou livraison dans les 58 wilayas, avec paiement à la livraison.\n\nLe site est gratuit et open source, en français, en arabe, en anglais et en espagnol.\n▶ Démo : https://hoshuko.github.io/tiziri/\n💻 Code : https://github.com/hoshuko/tiziri\n🎞 Toutes les maquettes : https://hoshuko.github.io/\n\nChapitres\n{chapters}\n\nCe que fait le site\n• Un studio en 3D où Elle et Lui, en bois, prennent la pose\n• La métamorphose : la photo prise en boutique, détourée puis mise en lumière\n• Une cabine d'essayage : on choisit une pièce, le mannequin l'enfile puis se met en marche\n• Une tenue de base écru, jamais vendue, pour que la pièce reste la vedette\n• Le défilé de toute la boutique, et chaque pièce sous quatre angles\n• Quatre langues, dont l'arabe de droite à gauche ; Astro, Three.js, sans cookies\n\nMaquette de démonstration : nom de la boutique, numéro et prix fictifs.\nMusique : composée pour la vidéo.\nPièces de démonstration : photos Unsplash, crédits en bas de page du site.\n\n#SiteWeb #Mode #Kabylie",
+     "en": "Tiziri is a fashion boutique in Tigzirt, in Kabylie. Every garment is photographed as it is in the shop, cut out without changing a thing, then worn by Elle and Lui, two articulated wooden mannequins that strike a pose and start walking. A fitting room, a runway of the whole shop, a wardrobe sorted in one tap, and orders on WhatsApp: in-store pickup or delivery to all 58 provinces, with cash on delivery.\n\nThe site is free and open source, in French, Arabic, English and Spanish.\n▶ Demo: https://hoshuko.github.io/tiziri/en/\n💻 Code: https://github.com/hoshuko/tiziri\n🎞 All the templates: https://hoshuko.github.io/en.html\n\nChapters\n{chapters}\n\nWhat the site does\n• A 3D studio where Elle and Lui, made of wood, strike a pose\n• The transformation: the shop photo, cut out, then set in the light\n• A fitting room: pick a piece, the mannequin puts it on and starts walking\n• A plain ecru base outfit, never for sale, so the piece stays the star\n• A runway of the whole shop, and every piece from four angles\n• Four languages, including right-to-left Arabic; Astro, Three.js, no cookies\n\nDemo template: the shop name, phone number and prices are fictional.\nMusic: composed for the video.\nDemo pieces: Unsplash photos, credited at the bottom of the site.\n\n#WebDesign #Fashion #Algeria",
+     "es": "Tiziri es una tienda de moda en Tigzirt, en Cabilia. Cada prenda se fotografía tal como es en la tienda, se recorta sin cambiar nada y la llevan Elle y Lui, dos maniquíes articulados de madera que posan y echan a andar. Un probador, un desfile de toda la tienda, un armario que se ordena con un gesto y pedidos por WhatsApp: recogida en la tienda o envío a las 58 provincias, con pago contra reembolso.\n\nLa web es gratuita y de código abierto, en francés, árabe, inglés y español.\n▶ Demo: https://hoshuko.github.io/tiziri/es/\n💻 Código: https://github.com/hoshuko/tiziri\n🎞 Todas las maquetas: https://hoshuko.github.io/es.html\n\nCapítulos\n{chapters}\n\nQué hace la web\n• Un estudio en 3D donde Elle y Lui, de madera, posan\n• La metamorfosis: la foto de la tienda, recortada y puesta bajo la luz\n• Un probador: eliges una prenda, el maniquí se la pone y echa a andar\n• Una ropa básica de color crudo, que no está a la venta, para que la prenda sea la protagonista\n• El desfile de toda la tienda, y cada prenda desde cuatro ángulos\n• Cuatro idiomas, con el árabe de derecha a izquierda; Astro, Three.js, sin cookies\n\nMaqueta de demostración: el nombre de la tienda, el teléfono y los precios son ficticios.\nMúsica: compuesta para el vídeo.\nPrendas de demostración: fotos de Unsplash, con créditos al pie de la web.\n\n#DiseñoWeb #Moda #Argelia",
+     "ar": "تيزيري محل أزياء في تيقزيرت بمنطقة القبائل. كل قطعة تُصوَّر كما هي في المحل، وتُفصل عن الخلفية دون أي تغيير، ثم يرتديانها «هي» و«هو»، عارضان خشبيان مفصليان يتّخذان الوضعيات وينطلقان في المشي. غرفة قياس، وعرض أزياء للمحل كله، وخزانة ملابس تُفرز بلمسة واحدة، والطلب عبر واتساب: الاستلام من المحل أو التوصيل إلى الولايات الثماني والخمسين، مع الدفع عند الاستلام.\n\nالموقع مجاني ومفتوح المصدر، بالفرنسية والعربية والإنجليزية والإسبانية.\n▶ العرض: https://hoshuko.github.io/tiziri/ar/\n💻 الكود: https://github.com/hoshuko/tiziri\n🎞 كل النماذج: https://hoshuko.github.io/\n\nالفصول\n{chapters}\n\nما يقدّمه الموقع\n• استوديو ثلاثي الأبعاد يتّخذ فيه «هي» و«هو» وضعياتهما\n• التحوّل: صورة المحل، مفصولة عن الخلفية ثم تحت الضوء\n• غرفة قياس: تختارون قطعة، فيلبسها العارض وينطلق في المشي\n• لباس أساسي بلون العاج، غير معروض للبيع، لتبقى القطعة هي النجمة\n• عرض أزياء للمحل كله، وكل قطعة من أربع زوايا\n• أربع لغات، منها العربية من اليمين إلى اليسار؛ Astro وThree.js دون ملفات تعريف الارتباط\n\nنموذج تجريبي: اسم المحل والرقم والأسعار خيالية.\nالموسيقى: مؤلفة للفيديو.\nالقطع التجريبية: صور من Unsplash، مع ذكر المصدر أسفل الموقع.\n\n#تصميم_مواقع #أزياء #الجزائر"
+    },
+    "tags": "site vitrine, boutique de mode, site de mode, tigzirt, kabylie, algérie, mannequin en bois, cabine d'essayage, essayage virtuel, web design, animation au scroll, three.js, webgl, astro, site gratuit, open source, template site web, fashion website, clothing store website, website template, diseño web, tienda de moda, tiziri, hoshuko",
+    "pinned_comment": "Le site est gratuit et open source 👉 https://hoshuko.github.io/tiziri/ Quel commerce je fais ensuite ? 👇",
+    "captions": [
+     "fr",
+     "en",
+     "es",
+     "ar"
+    ],
+    "versions": {
+     "fr": "youtube/tiziri/out/tiziri-visite-fr.mp4",
+     "en": "youtube/tiziri/out/tiziri-visite-en.mp4",
+     "es": "youtube/tiziri/out/tiziri-visite-es.mp4",
+     "ar": "youtube/tiziri/out/tiziri-visite-ar.mp4"
+    }
+   },
+   "short": {
+    "publish": "18:30",
+    "file": "sources/boutique-tigzirt/promo/tiziri-promo-9x16-fr.mp4",
+    "title": {
+     "fr": "Une photo de boutique qui prend vie 👗",
+     "en": "A shop photo that comes to life 👗",
+     "es": "Una foto de tienda que cobra vida 👗",
+     "ar": "صورة من المحل تنبض بالحياة 👗"
+    },
+    "description": {
+     "fr": "Tiziri, un site de boutique de mode gratuit et open source : https://hoshuko.github.io/tiziri/\n#Shorts #SiteWeb #Mode",
+     "en": "Tiziri, a free and open-source fashion boutique website: https://hoshuko.github.io/tiziri/en/\n#Shorts #WebDesign #Fashion",
+     "es": "Tiziri, una web de tienda de moda gratuita y de código abierto: https://hoshuko.github.io/tiziri/es/\n#Shorts #DiseñoWeb #Moda",
+     "ar": "تيزيري، موقع مجاني ومفتوح المصدر لمحل أزياء: https://hoshuko.github.io/tiziri/ar/\n#Shorts #تصميم_مواقع #أزياء"
+    },
+    "related_video": "la vidéo longue du jour"
+   }
+  }
+ ]
+}

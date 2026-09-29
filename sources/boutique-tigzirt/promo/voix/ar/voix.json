@@ -1,0 +1,62 @@
+{
+ "voix": "Gemini TTS (gemini-3.8-flash-tts), voix Sulafat",
+ "consigne": "[warm] [elegant] [smiling]",
+ "style": "Warm, elegant and confident voice for a premium fashion boutique advert: smooth, natural and unhurried, with a gentle smile, and a clear pause between sentences.",
+ "vitesse": 1.04,
+ "lignes": [
+  {
+   "t": 0.5,
+   "fichier": "01.wav",
+   "texte": "صورة واحدة، التُقطت في المتجر.",
+   "duree": 3.9
+  },
+  {
+   "t": 5.1,
+   "fichier": "02.wav",
+   "texte": "نفرّغ القطعة، دون أن نغيّر فيها شيئًا.",
+   "duree": 4.99
+  },
+  {
+   "t": 10.4,
+   "fichier": "03.wav",
+   "texte": "ثم ترتديها «إيل»، دميتنا الخشبية… فتنبض القطعة بالحياة.",
+   "duree": 5.89
+  },
+  {
+   "t": 19.7,
+   "fichier": "04.wav",
+   "texte": "تيزيري. متجر الأزياء الخاص بكم في تيقزيرت، على الإنترنت.",
+   "duree": 4.98
+  },
+  {
+   "t": 24.98,
+   "fichier": "05.wav",
+   "texte": "كل قطعة في المتجر تُعرض وهي في حركة.",
+   "duree": 3.39
+  },
+  {
+   "t": 34.1,
+   "fichier": "06.wav",
+   "texte": "على الموقع: غرفة القياس، والعرض، وكل قطعة من جميع الزوايا.",
+   "duree": 5.96
+  },
+  {
+   "t": 43.3,
+   "fichier": "07.wav",
+   "texte": "بالفرنسية والعربية والإنجليزية والإسبانية.",
+   "duree": 5.08
+  },
+  {
+   "t": 48.68,
+   "fichier": "08.wav",
+   "texte": "أعجبتكم قطعة؟ راسلونا على واتساب: استلموها من المتجر أو نوصلها إليكم.",
+   "duree": 6.1
+  },
+  {
+   "t": 55.08,
+   "fichier": "09.wav",
+   "texte": "تيزيري. ما ترونه هنا، تجدونه في المتجر.",
+   "duree": 4.02
+  }
+ ]
+}

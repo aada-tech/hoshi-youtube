@@ -1,0 +1,184 @@
+fr: Atelier Nacre, vidéo promo
+en: Atelier Nacre, promo video
+es: Atelier Nacre, vídeo promocional
+ar: أتيليه ناكر، فيديو ترويجي
+
+fr: Une pose,
+en: One set,
+es: Una uña,
+ar: طلاءٌ واحد،
+
+fr: six couches.
+en: six layers.
+es: seis capas.
+ar: ستُّ طبقات.
+
+fr: 1 h 15 de pose · dès 55 € · tenue 3 à 4 semaines
+en: 1 h 15 · from €55 · lasts 3 to 4 weeks
+es: 1 h 15 · desde 55 € · dura de 3 a 4 semanas
+ar: ساعة و15 دقيقة · ابتداءً من 55 € · يدوم 3 إلى 4 أسابيع
+
+fr: Atelier
+en: Atelier
+es: Atelier
+ar: أتيليه
+
+fr: Nacre
+en: Nacre
+es: Nacre
+ar: ناكر
+
+fr: Prothésiste ongulaire · Bordeaux
+en: Nail technician · Bordeaux
+es: Técnica de uñas · Burdeos
+ar: خبيرة تجميل الأظافر · بوردو
+
+fr: Gel
+en: Gel
+es: Gel
+ar: جل
+
+fr: Semi-permanent
+en: Gel polish
+es: Semipermanente
+ar: شبه دائم
+
+fr: Nail art
+en: Nail art
+es: Nail art
+ar: نيل آرت
+
+fr: Essayez
+en: Try on
+es: Prueba
+ar: جرّبي
+
+fr: la <em>couleur</em>.
+en: the <em>colour</em>.
+es: el <em>color</em>.
+ar: <em>اللون</em>.
+
+fr: Quelle
+en: Which
+es: ¿Qué
+ar: أيُّ
+
+fr: forme&nbsp;?
+en: shape?
+es: forma?
+ar: <em>شكل؟</em>
+
+fr: Les poses
+en: This week’s
+es: Las manicuras
+ar: أعمال
+
+fr: de la semaine.
+en: sets.
+es: de la semana.
+ar: الأسبوع.
+
+fr: L’hygiène,
+en: Hygiene
+es: La higiene,
+ar: النظافة،
+
+fr: avant la <em>couleur</em>.
+en: before <em>colour</em>.
+es: antes que el <em>color</em>.
+ar: قبل <em>اللون</em>.
+
+fr: Instruments stérilisés
+en: Sterilised instruments
+es: Instrumental esterilizado
+ar: أدوات معقّمة
+
+fr: Autoclave de classe B, sachets ouverts devant vous.
+en: Class B autoclave, pouches opened in front of you.
+es: Autoclave de clase B, bolsas abiertas delante de ti.
+ar: أوتوكلاف من الفئة B، أكياس تُفتح أمامك.
+
+fr: Limes à usage unique
+en: Single-use files
+es: Limas de un solo uso
+ar: مبارد للاستعمال مرة واحدة
+
+fr: Neuves pour chaque cliente, offertes à la fin.
+en: New for every client, and yours to keep.
+es: Nuevas para cada clienta, y te las llevas.
+ar: جديدة لكل زبونة، تُهدى لها في النهاية.
+
+fr: Une cliente à la fois
+en: One client at a time
+es: Una clienta cada vez
+ar: زبونة واحدة في كل مرة
+
+fr: Table désinfectée entre chaque rendez-vous.
+en: Table disinfected between appointments.
+es: Mesa desinfectada entre citas.
+ar: تُعقَّم الطاولة بين كل موعدين.
+
+fr: La <em style="color:var(--nude)">carte</em>.
+en: The <em style="color:var(--nude)">menu</em>.
+es: La <em style="color:var(--nude)">carta</em>.
+ar: <em style="color:var(--nude)">القائمة</em>.
+
+fr: 45 min
+en: 45 min
+es: 45 min
+ar: 45 دقيقة
+
+fr: Gel sur ongles naturels
+en: Gel overlay
+es: Gel sobre uña natural
+ar: جل على الأظافر الطبيعية
+
+fr: 1 h 15
+en: 1 h 15
+es: 1 h 15
+ar: ساعة و15 دقيقة
+
+fr: Rallongement gel
+en: Gel extensions
+es: Extensión de gel
+ar: تطويل بالجل
+
+fr: 1 h 45
+en: 1 h 45
+es: 1 h 45
+ar: ساعة و45 دقيقة
+
+fr: Tenue 3 à 4 semaines · réparation offerte 7 jours
+en: Lasts 3 to 4 weeks · free repairs for 7 days
+es: Dura de 3 a 4 semanas · reparación gratis durante 7 días
+ar: يدوم 3 إلى 4 أسابيع · إصلاح مجاني خلال 7 أيام
+
+fr: Atelier <span class="nacre-text">Nacre</span>
+en: Atelier <span class="nacre-text">Nacre</span>
+es: Atelier <span class="nacre-text">Nacre</span>
+ar: أتيليه <span class="nacre-text">ناكر</span>
+
+fr: Réservez sur Planity
+en: Book on Planity
+es: Reserva en Planity
+ar: احجزي على Planity
+
+fr: @atelier.nacre
+en: @atelier.nacre
+es: @atelier.nacre
+ar: @atelier.nacre
+
+fr: 14 rue Notre-Dame · Bordeaux Chartrons
+en: 14 rue Notre-Dame · Bordeaux Chartrons
+es: 14 rue Notre-Dame · Burdeos, Chartrons
+ar: 14 شارع نوتردام · بوردو، حي شارترون
+
+fr: Mardi – samedi, sur rendez-vous
+en: Tuesday – Saturday, by appointment
+es: Martes – sábado, con cita previa
+ar: من الثلاثاء إلى السبت، بموعد مسبق
+
+fr: Maquette de démonstration · données fictives
+en: Demo site · fictional data
+es: Maqueta de demostración · datos ficticios
+ar: نموذج تجريبي · بيانات خيالية

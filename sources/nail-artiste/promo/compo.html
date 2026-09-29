@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Atelier Nacre, vidéo promo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Gloock&family=Hanken+Grotesk:wght@400..700&family=Amiri&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Noto+Sans+Mono:wght@400;500&display=block">
+<style>
+:root { --perle: #F6F2F1; --perle2: #EEE6E4; --encre: #1F1418; --encre2: #5C4C52; --rn: #5B0E22; --rn2: #420918; --nude: #E6C3B8; --or: #B8924E;
+  --display: 'Gloock', 'Amiri', serif; --sans: 'Hanken Grotesk', 'IBM Plex Sans Arabic', sans-serif; --mono: 'DM Mono', 'IBM Plex Sans Arabic', monospace; }
+[dir="rtl"] .mono { letter-spacing: 0; }  /* pas d'espacement entre les lettres arabes (elles sont liées) */
+html, body { margin: 0; background: #000; }
+#stage { position: relative; width: var(--W); height: var(--H); overflow: hidden; background: var(--perle); font-family: var(--sans); color: var(--encre); }
+.scene { position: absolute; inset: 0; overflow: hidden; visibility: hidden; }
+.abs { position: absolute; }
+.ln { display: block; overflow: hidden; padding: .06em 0 .12em; margin: -.06em 0 -.12em; }
+.ln > span { display: inline-block; will-change: transform; }
+.big { font-family: var(--display); font-weight: 400; letter-spacing: -.01em; line-height: .98; margin: 0; }
+.big em { font-style: normal; color: var(--rn); }
+.mono { font-family: var(--mono); font-weight: 500; letter-spacing: .14em; text-transform: uppercase; }
+.pill { display: inline-flex; align-items: center; gap: 14px; border-radius: 999px; white-space: nowrap; }
+.stage3d { position: absolute; inset: 0; perspective: 1700px; }
+.stack { position: absolute; transform-style: preserve-3d; transform-origin: 50% 50%; }
+.plate { position: absolute; inset: 0; transform-style: preserve-3d; }
+.fill { position: absolute; inset: 0; background-repeat: no-repeat; }
+.pl-naturel .fill { filter: saturate(.55) brightness(1.1) contrast(.92); }
+.pl-base .fill { background: linear-gradient(135deg, rgba(255, 255, 255, .82), rgba(255, 232, 238, .5)); }
+.pl-gel .fill { background: linear-gradient(160deg, rgba(255, 255, 255, .72), rgba(255, 255, 255, .12) 42%, rgba(255, 255, 255, .45) 70%, rgba(255, 255, 255, .2)); }
+.pl-top .fill { background: linear-gradient(112deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, .92) 38%, rgba(255, 255, 255, 0) 46%), linear-gradient(rgba(255, 255, 255, .16), rgba(255, 255, 255, .16)); }
+.edge { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.edge polygon { fill: none; stroke: rgba(31, 20, 24, .35); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+.num { position: absolute; width: 46px; height: 46px; margin: -23px 0 0 14px; border-radius: 50%; background: var(--rn); color: var(--perle); font: 500 20px/46px var(--mono); text-align: center; opacity: 0; }
+.lab { display: grid; grid-template-columns: 58px 1fr auto; align-items: baseline; gap: 10px; opacity: 0; }
+.lab .n { font: 500 22px/1 var(--mono); color: var(--rn); }
+.lab b { font: 400 40px/1.1 var(--display); font-weight: 400; }
+.lab em { font: 500 22px/1 var(--mono); font-style: normal; color: var(--encre2); }
+.disc { border-radius: 50%; background: url(../site/img/tx-nacre.webp) center / cover; box-shadow: inset 0 0 0 2px rgba(255, 255, 255, .25), 0 20px 40px -18px rgba(0, 0, 0, .5); }
+.nacre-text { background: url(../site/img/tx-nacre.webp) center / cover; -webkit-background-clip: text; background-clip: text; color: transparent; }
+.sw { width: 74px; height: 74px; border-radius: 50%; background: radial-gradient(circle at 34% 28%, rgba(255, 255, 255, .8) 0 10%, rgba(255, 255, 255, 0) 32%), var(--c); box-shadow: inset 0 -9px 14px rgba(0, 0, 0, .22), 0 10px 18px -10px rgba(31, 20, 24, .6); }
+.shape-line { fill: none; stroke: var(--encre); stroke-width: 1.3; }
+.gal { position: absolute; inset: 0; overflow: hidden; }
+.gal img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.gal .fg { position: absolute; left: 50%; top: 80px; height: 920px; width: auto; transform: translateX(-50%); border-radius: 18px; box-shadow: 0 40px 80px -30px rgba(0, 0, 0, .6); }
+.gal .bg { filter: blur(38px) brightness(.55); transform: scale(1.2); }
+.gcap { position: absolute; left: 60px; right: 60px; display: flex; justify-content: space-between; align-items: center; padding: 22px 28px; border-radius: 16px; background: rgba(246, 242, 241, .92); }
+.gcap b { font: 400 46px/1.05 var(--display); font-weight: 400; }
+.gcap span { font: 500 22px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--encre2); }
+.shim { position: absolute; top: -20%; height: 140%; width: 260px; margin-left: -130px; background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, .95) 50%, rgba(255, 255, 255, 0)); mix-blend-mode: screen; pointer-events: none; opacity: 0; z-index: 40; }
+.shim::after { content: ''; position: absolute; inset: 0; background: url(../site/img/tx-nacre.webp) center / cover; opacity: .55; mix-blend-mode: multiply; -webkit-mask: linear-gradient(90deg, transparent, #000 40%, #000 60%, transparent); mask: linear-gradient(90deg, transparent, #000 40%, #000 60%, transparent); }
+.hcard { position: absolute; left: 80px; right: 80px; display: grid; grid-template-columns: 250px 1fr; gap: 30px; align-items: center; padding: 18px; border-radius: 20px; background: #fff; box-shadow: 0 30px 60px -34px rgba(31, 20, 24, .45); opacity: 0; }
+.hcard img { width: 250px; height: 190px; object-fit: cover; border-radius: 12px; }
+.hcard b { display: block; font: 400 44px/1.05 var(--display); }
+.hcard p { margin: 10px 0 0; font: 500 26px/1.3 var(--sans); color: var(--encre2); }
+.prow { display: grid; grid-template-columns: 1fr auto; gap: 6px 20px; align-items: baseline; padding: 26px 0; border-bottom: 1px solid rgba(246, 242, 241, .18); opacity: 0; }
+.prow b { font: 400 52px/1.05 var(--display); font-weight: 400; }
+.prow .p { font: 400 64px/1 var(--display); }
+.prow small { grid-column: 1 / 3; font: 500 22px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: rgba(246, 242, 241, .6); }
+</style>
+</head>
+<body>
+<div id="stage">
+  <!-- 1. Une pose, six couches -->
+  <section class="scene" id="s1" style="background:radial-gradient(90% 70% at 50% 45%, #FBF8F7, var(--perle) 55%, var(--perle2))">
+    <img class="abs" id="s1-ph" src="../site/img/anatomie-ongle.webp" alt="" style="transform-origin:0 0">
+    <div class="stage3d" id="s1-3d"><div class="stack" id="stack"></div></div>
+    <div class="abs" style="left:0;right:0;top:0;height:34%;background:linear-gradient(180deg, rgba(246,242,241,.92), rgba(246,242,241,0))" id="s1-veil"></div>
+    <h1 class="abs big" id="s1-t" style="left:80px;right:60px;font-size:124px"><span class="ln"><span>Une pose,</span></span><span class="ln"><span><em>six couches.</em></span></span></h1>
+    <div class="abs" id="s1-labs" style="left:80px;right:80px;display:grid;gap:12px"></div>
+    <p class="abs mono" id="s1-tot" style="left:80px;right:80px;margin:0;font-size:22px;color:var(--encre2)">1 h 15 de pose · dès 55 € · tenue 3 à 4 semaines</p>
+  </section>
+
+  <!-- 2. La marque -->
+  <section class="scene" id="s2" style="background:var(--rn2);color:var(--perle)">
+    <div class="abs" id="s2-box" style="left:60px;right:60px;text-align:center">
+      <div class="disc" id="s2-disc" style="width:200px;height:200px;margin:0 auto 46px"></div>
+      <div class="ln"><span id="s2-a" class="big" style="font-size:118px;color:var(--perle)">Atelier</span></div>
+      <div class="ln"><span id="s2-b" class="big nacre-text" style="font-size:210px;line-height:.9">Nacre</span></div>
+      <p class="ln" style="margin:34px 0 0"><span id="s2-eb" class="mono" style="font-size:26px;color:var(--nude)">Prothésiste ongulaire · Bordeaux</span></p>
+      <div id="s2-chips" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:44px">
+        <span class="pill" style="border:2px solid rgba(246,242,241,.35);font:600 30px/1 var(--sans);padding:16px 26px">Gel</span>
+        <span class="pill" style="border:2px solid rgba(246,242,241,.35);font:600 30px/1 var(--sans);padding:16px 26px">Semi-permanent</span>
+        <span class="pill" style="border:2px solid rgba(246,242,241,.35);font:600 30px/1 var(--sans);padding:16px 26px">Nail art</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Essayez la couleur -->
+  <section class="scene" id="s3" style="background:var(--perle2)">
+    <h2 class="abs big" id="s3-t" style="left:80px;right:60px;font-size:112px"><span class="ln"><span>Essayez</span></span><span class="ln"><span>la <em>couleur</em>.</span></span></h2>
+    <canvas class="abs" id="s3-cv" width="935" height="704" style="border-radius:30px;box-shadow:0 50px 90px -50px rgba(31,20,24,.6)"></canvas>
+    <div class="abs" id="s3-lab" style="left:80px;right:80px;display:flex;align-items:center;justify-content:space-between;gap:20px">
+      <span style="display:flex;align-items:center;gap:18px"><i id="s3-dot" style="width:52px;height:52px;border-radius:50%;display:inline-block;box-shadow:inset 0 -6px 10px rgba(0,0,0,.25)"></i><b id="s3-name" style="font:400 56px/1 var(--display)"></b></span>
+      <span class="mono" id="s3-ref" style="font-size:24px;color:var(--encre2)"></span>
+    </div>
+    <div class="abs" id="s3-sw" style="left:80px;right:80px;display:flex;justify-content:space-between"></div>
+  </section>
+
+  <!-- 4. Quelle forme ? -->
+  <section class="scene" id="s4" style="background:radial-gradient(80% 60% at 50% 55%, #fff, var(--perle2))">
+    <h2 class="abs big" id="s4-t" style="left:80px;right:60px;font-size:112px"><span class="ln"><span>Quelle</span></span><span class="ln"><span><em>forme&nbsp;?</em></span></span></h2>
+    <svg class="abs" id="s4-svg" viewBox="0 0 200 330" style="overflow:visible;filter:drop-shadow(0 30px 34px rgba(31,20,24,.2))">
+      <defs>
+        <pattern id="nac" patternUnits="userSpaceOnUse" width="200" height="266"><image href="../site/img/tx-nacre.webp" width="200" height="266" preserveAspectRatio="xMidYMid slice"/></pattern>
+        <linearGradient id="nat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F3D6CF"/><stop offset="1" stop-color="#E6B8AE"/></linearGradient>
+        <linearGradient id="gl" x1="0" y1="0" x2="1" y2="0"><stop offset=".18" stop-color="#fff" stop-opacity="0"/><stop offset=".3" stop-color="#fff" stop-opacity=".55"/><stop offset=".42" stop-color="#fff" stop-opacity="0"/></linearGradient>
+        <clipPath id="cp"><path id="cpp"/></clipPath>
+      </defs>
+      <g clip-path="url(#cp)"><rect width="200" height="150" fill="url(#nac)"/><rect y="150" width="200" height="180" fill="url(#nat)"/><rect width="200" height="330" fill="url(#gl)"/></g>
+      <path class="shape-line" id="s4-path"/>
+      <line x1="16" y1="150" x2="184" y2="150" stroke="#5B0E22" stroke-width="1" stroke-dasharray="3 4"/>
+    </svg>
+    <div class="abs" id="s4-names" style="left:60px;right:60px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap"></div>
+    <p class="abs" id="s4-desc" style="left:80px;right:80px;margin:0;text-align:center;font:500 32px/1.3 var(--sans);color:var(--encre2)"></p>
+  </section>
+
+  <!-- 5. Galerie -->
+  <section class="scene" id="s5" style="background:var(--encre)">
+    <div id="s5-gal"></div>
+    <h2 class="abs big" id="s5-t" style="left:80px;right:60px;font-size:104px;color:var(--perle);text-shadow:0 4px 30px rgba(0,0,0,.35)"><span class="ln"><span>Les poses</span></span><span class="ln"><span>de la semaine.</span></span></h2>
+  </section>
+
+  <!-- 6. Hygiène -->
+  <section class="scene" id="s6" style="background:var(--perle)">
+    <h2 class="abs big" id="s6-t" style="left:80px;right:60px;font-size:104px"><span class="ln"><span>L’hygiène,</span></span><span class="ln"><span>avant la <em>couleur</em>.</span></span></h2>
+    <div class="hcard" id="h1"><img src="../site/img/hyg-outils.webp" alt=""><div><b>Instruments stérilisés</b><p>Autoclave de classe B, sachets ouverts devant vous.</p></div></div>
+    <div class="hcard" id="h2"><img src="../site/img/hyg-limes.webp" alt=""><div><b>Limes à usage unique</b><p>Neuves pour chaque cliente, offertes à la fin.</p></div></div>
+    <div class="hcard" id="h3"><img src="../site/img/studio-salon.webp" alt=""><div><b>Une cliente à la fois</b><p>Table désinfectée entre chaque rendez-vous.</p></div></div>
+  </section>
+
+  <!-- 7. Tarifs -->
+  <section class="scene" id="s7" style="background:var(--encre);color:var(--perle)">
+    <h2 class="abs big" id="s7-t" style="left:80px;right:60px;font-size:112px;color:var(--perle)"><span class="ln"><span>La <em style="color:var(--nude)">carte</em>.</span></span></h2>
+    <div class="abs" id="s7-rows" style="left:80px;right:80px">
+      <div class="prow"><b>Semi-permanent</b><span class="p">35 €</span><small>45 min</small></div>
+      <div class="prow"><b>Gel sur ongles naturels</b><span class="p">55 €</span><small>1 h 15</small></div>
+      <div class="prow"><b>Rallongement gel</b><span class="p">70 €</span><small>1 h 45</small></div>
+    </div>
+    <p class="abs mono" id="s7-note" style="left:80px;right:80px;margin:0;font-size:24px;color:var(--nude)">Tenue 3 à 4 semaines · réparation offerte 7 jours</p>
+  </section>
+
+  <!-- 8. Réservation -->
+  <section class="scene" id="s8" style="background:var(--rn2);color:var(--perle)">
+    <div class="abs" id="s8-box" style="left:60px;right:60px;text-align:center">
+      <div class="disc" id="s8-disc" style="width:150px;height:150px;margin:0 auto 34px"></div>
+      <div class="ln"><span id="s8-a" class="big" style="font-size:96px;color:var(--perle)">Atelier <span class="nacre-text">Nacre</span></span></div>
+      <p class="ln" style="margin:26px 0 0"><span id="s8-eb" class="mono" style="font-size:24px;color:var(--nude)">Prothésiste ongulaire · Bordeaux</span></p>
+      <div id="s8-book" style="margin-top:60px"><span class="pill" style="background:var(--perle);color:var(--encre);font:400 60px/1 var(--display);padding:26px 46px">Réservez sur Planity</span></div>
+      <p class="ln" style="margin:46px 0 0"><span id="s8-ig" dir="ltr" style="font:600 44px/1.2 var(--sans);unicode-bidi:isolate">@atelier.nacre</span></p>
+      <p class="ln" style="margin:30px 0 0"><span id="s8-ad" style="font:500 34px/1.35 var(--sans);color:rgba(246,242,241,.85)">14 rue Notre-Dame · Bordeaux Chartrons</span></p>
+      <p class="ln" style="margin:10px 0 0"><span id="s8-h" style="font:500 30px/1.35 var(--sans);color:var(--nude)">Mardi – samedi, sur rendez-vous</span></p>
+    </div>
+    <p class="abs" id="s8-demo" style="left:0;right:0;text-align:center;font:500 22px/1 var(--sans);color:rgba(246,242,241,.5);margin:0">Maquette de démonstration · données fictives</p>
+  </section>
+
+  <div class="shim" id="shim"></div>
+</div>
+
+<script>
+window.NACRE = null;
+</script>
+<script src="nails.js"></script>
+<script>
+(() => {
+  'use strict';
+  const $ = s => document.querySelector(s);
+  const $$ = s => [...document.querySelectorAll(s)];
+  const F = new URLSearchParams(location.search).get('f') || '45';
+  const V = F === '916', L = F === '169', W = L ? 1920 : 1080, H = L ? 1080 : V ? 1920 : 1350;
+  document.documentElement.style.setProperty('--W', W + 'px');
+  document.documentElement.style.setProperty('--H', H + 'px');
+  const TOP = L ? 70 : V ? 200 : 76, BOT = L ? 80 : V ? 400 : 96;
+  const RTL = document.documentElement.dir === 'rtl';
+  const mirror = k => RTL ? ({ left: 'right', right: 'left' }[k] || k) : k;  // arabe : mise en page en miroir
+  const side = (el, o) => Object.assign(el.style, Object.fromEntries(Object.entries(o).map(([k, v]) => [mirror(k), typeof v === 'number' ? v + 'px' : v])));
+  if (L) $$('h1.abs, h2.abs').forEach(h => side(h, { left: 100, right: 1000 }));
+  const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+  const lerp = (a, b, t) => a + (b - a) * t;
+  const k01 = (t, a, d) => clamp((t - a) / d);
+  const eo = t => 1 - Math.pow(1 - t, 3);
+  const eio = t => (t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+  const eob = t => { const c1 = 1.70158, c3 = c1 + 1; return 1 + c3 * Math.pow(t - 1, 3) + c1 * Math.pow(t - 1, 2); };
+  const CUES = [];
+  const cue = (t, type, arg) => CUES.push([+t.toFixed(3), type, arg == null ? null : arg]);
+  const rev = (el, t, t0, d = .55) => { el.style.transform = `translateY(${((1 - eo(k01(t, t0, d))) * 115).toFixed(2)}%)`; };
+  const pop = (el, t, t0, d = .45) => { const k = k01(t, t0, d); el.style.opacity = k > 0 ? Math.min(1, k * 3) : 0; el.style.transform = `scale(${(.6 + .4 * eob(k)).toFixed(4)})`; };
+  const NA = NAILS.anatomie;
+
+  /* ---------- transitions : reflet nacré qui balaie l'écran ---------- */
+  const shim = $('#shim'), SHIMS = [];
+  const addShim = (t0, el, d = .6) => { SHIMS.push({ t0, el, d }); cue(t0, 'shimmer'); };
+  function shims(t) {
+    let on = false;
+    SHIMS.forEach(s => {
+      const k = k01(t, s.t0, s.d);
+      if (t >= s.t0 && t < s.t0 + s.d + .05) {
+        const e = eio(k), x = lerp(-300, W + 300, e);
+        s.el.style.clipPath = `polygon(0 0, ${(x + 180).toFixed(1)}px 0, ${(x - 180).toFixed(1)}px 100%, 0 100%)`;
+        shim.style.left = x + 'px'; shim.style.transform = 'rotate(14deg)'; shim.style.opacity = Math.sin(Math.PI * k).toFixed(3); on = true;
+      } else if (t >= s.t0 + s.d + .05) s.el.style.clipPath = 'none';
+    });
+    if (!on) shim.style.opacity = 0;
+  }
+  const panelUp = (el, t, t0, d = .42) => { const k = eio(k01(t, t0, d)); el.style.clipPath = `inset(${((1 - k) * 100).toFixed(2)}% 0 0 0)`; };
+  const circle = (el, t, t0, d = .6) => { const k = eo(k01(t, t0, d)); el.style.clipPath = `circle(${(k * 75).toFixed(2)}% at 50% 50%)`; };
+
+  /* ---------- Scène 1 : une pose, six couches ---------- */
+  const bb = (() => { const xs = NA.ongle.map(p => p[0]), ys = NA.ongle.map(p => p[1]); return { x0: Math.min(...xs), x1: Math.max(...xs), y0: Math.min(...ys), y1: Math.max(...ys) }; })();
+  const [zx0, zy0, zx1, zy1] = NA.zoom, ZW = 1134, ZH = 851;
+  const nailPx = { x: (bb.x0 - zx0) / (zx1 - zx0) * ZW, y: (bb.y0 - zy0) / (zy1 - zy0) * ZH, w: (bb.x1 - bb.x0) / (zx1 - zx0) * ZW, h: (bb.y1 - bb.y0) / (zy1 - zy0) * ZH };
+  const toPl = ([x, y]) => [(x - bb.x0) / (bb.x1 - bb.x0) * 100, (y - bb.y0) / (bb.y1 - bb.y0) * 100];
+  const clipP = poly => `polygon(${poly.map(p => toPl(p).map(v => v.toFixed(2) + '%').join(' ')).join(',')})`;
+  const edgeP = poly => poly.map(p => toPl(p).map(v => v.toFixed(2)).join(',')).join(' ');
+  const tip = toPl(NA.ongle.reduce((a, p) => (p[0] > a[0] ? p : a)));
+  const SN = L ? 700 : V ? 820 : 740;                  // largeur finale de l'ongle
+  const SC = { x: L ? 1280 : 540, y: L ? 560 : V ? 800 : 600 };   // centre final de la pile
+  const sEnd = SN / nailPx.w, sStart = Math.max(W / ZW, H / ZH) * 1.02;
+  const SW = SN, SH = SN * nailPx.h / nailPx.w;
+  Object.assign($('#stack').style, { width: SW + 'px', height: SH + 'px', left: (SC.x - SW / 2) + 'px', top: (SC.y - SH / 2) + 'px' });
+  $('#s1-3d').style.perspectiveOrigin = `${SC.x}px ${SC.y}px`;
+  const KINDS = ['naturel', 'base', 'gel', 'couleur', 'art', 'top'];
+  const LG = document.documentElement.lang || 'fr';
+  if (LG === 'ar') document.documentElement.dir = 'rtl';  // arabe : de droite à gauche (les blocs vont d'un bord à l'autre, l'alignement suit)
+  const T = {
+    fr: { couches: ['Ongle naturel', 'Base', 'Gel de construction', 'Couleur, 2 couches', 'Nail art', 'Top coat'],
+          te: ['Lait d’amande', 'Rose thé', 'Nude poudré', 'Rouge noir', 'Cerise', 'Bleu nuit', 'Sauge', 'Noir laqué'],
+          fin: { brillant: 'brillant', mat: 'mat', chrome: 'chrome', paillete: 'pailleté' },
+          shapes: [['Carré', 'Net, pour les mains actives'], ['Ovale', 'Le classique qui allonge'], ['Amande', 'La plus demandée à l’atelier'], ['Ballerine', 'Bout droit, côtés effilés'], ['Stiletto', 'Pointue, en rallongement gel']],
+          gal: [['French classique', 'French'], ['Baby boomer rose', 'Baby boomer'], ['Amande bleu chrome', 'Chrome'], ['Stiletto métallique', 'Nail art'], ['Rouge et perles', 'Minimaliste'], ['Baby boomer nacré', 'Baby boomer'], ['Bordeaux et bagues', 'Minimaliste'], ['Cerise, carré court', 'Minimaliste']] },
+    en: { couches: ['Natural nail', 'Base coat', 'Builder gel', 'Colour, 2 coats', 'Nail art', 'Top coat'],
+          te: ['Almond milk', 'Tea rose', 'Powder nude', 'Oxblood', 'Cherry', 'Midnight blue', 'Sage', 'Black lacquer'],
+          fin: { brillant: 'gloss', mat: 'matte', chrome: 'chrome', paillete: 'glitter' },
+          shapes: [['Square', 'Clean, for busy hands'], ['Oval', 'The lengthening classic'], ['Almond', 'The studio’s most requested'], ['Ballerina', 'Straight tip, tapered sides'], ['Stiletto', 'Pointed, with gel extensions']],
+          gal: [['Classic French', 'French'], ['Pink baby boomer', 'Baby boomer'], ['Blue chrome almond', 'Chrome'], ['Metallic stiletto', 'Nail art'], ['Red and pearls', 'Minimalist'], ['Pearly baby boomer', 'Baby boomer'], ['Burgundy and rings', 'Minimalist'], ['Cherry, short square', 'Minimalist']] },
+    es: { couches: ['Uña natural', 'Base', 'Gel constructor', 'Color, 2 capas', 'Nail art', 'Top coat'],
+          te: ['Leche de almendra', 'Rosa té', 'Nude empolvado', 'Granate', 'Cereza', 'Azul noche', 'Salvia', 'Negro lacado'],
+          fin: { brillant: 'brillo', mat: 'mate', chrome: 'cromado', paillete: 'purpurina' },
+          shapes: [['Cuadrada', 'Limpia, para manos activas'], ['Ovalada', 'La clásica que alarga'], ['Almendra', 'La más pedida en el estudio'], ['Bailarina', 'Punta recta, laterales afilados'], ['Stiletto', 'Puntiaguda, con extensión de gel']],
+          gal: [['French clásica', 'French'], ['Baby boomer rosa', 'Baby boomer'], ['Almendra azul cromado', 'Cromado'], ['Stiletto metalizado', 'Nail art'], ['Rojo y perlas', 'Minimalista'], ['Baby boomer nacarado', 'Baby boomer'], ['Burdeos y anillos', 'Minimalista'], ['Cereza, cuadrada corta', 'Minimalista']] },
+    ar: { couches: ['ظفر طبيعي', 'طبقة أساس', 'جل بناء', 'لون، طبقتان', 'نيل آرت', 'طبقة نهائية'],
+          te: ['حليب اللوز', 'وردي شاي', 'نيود بودرة', 'أحمر داكن', 'كرزي', 'أزرق ليلي', 'ميرمية', 'أسود لامع'],
+          fin: { brillant: 'لامع', mat: 'مطفي', chrome: 'كروم', paillete: 'بريق' },
+          shapes: [['مربّع', 'أنيق، لليدين النشيطتين'], ['بيضاوي', 'الكلاسيكي الذي يطيل الأصابع'], ['لوزي', 'الأكثر طلبًا في الأتيليه'], ['بالرينا', 'طرف مستقيم وجوانب مدبّبة'], ['ستيليتو', 'مدبّب، مع تطويل بالجل']],
+          gal: [['فرنش كلاسيكي', 'فرنش'], ['بيبي بومر وردي', 'بيبي بومر'], ['لوزي أزرق كروم', 'كروم'], ['ستيليتو معدني', 'نيل آرت'], ['أحمر ولآلئ', 'بسيط'], ['بيبي بومر لؤلؤي', 'بيبي بومر'], ['بوردو وخواتم', 'بسيط'], ['كرزي، مربّع قصير', 'بسيط']] }
+  }[LG];
+  const COUCHES = [15, 5, 20, 15, 15, 5].map((min, i) => [T.couches[i], min]);
+  const ART = `<svg viewBox="0 0 146.5 100" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;overflow:visible"><defs>
+    <pattern id="por" patternUnits="userSpaceOnUse" width="70" height="46"><image href="../site/img/tx-or.webp" width="70" height="46" preserveAspectRatio="xMidYMid slice"/></pattern>
+    <pattern id="ppe" patternUnits="userSpaceOnUse" width="16" height="11"><image href="../site/img/tx-perles.webp" width="16" height="11" preserveAspectRatio="xMidYMid slice"/></pattern></defs>
+    <path d="M21 9 C9 27 9 50 21 66" fill="none" stroke="url(#por)" stroke-width="4.2" stroke-linecap="round"/><path d="M29 14 C21 29 21 47 29 60" fill="none" stroke="url(#por)" stroke-width="1.4" stroke-linecap="round" opacity=".8"/>
+    <circle cx="33" cy="24" r="3.6" fill="url(#ppe)"/><circle cx="28.5" cy="37" r="4.3" fill="url(#ppe)"/><circle cx="33" cy="50" r="3.6" fill="url(#ppe)"/>
+    <circle cx="32" cy="22.8" r="1.1" fill="#fff" opacity=".9"/><circle cx="27.3" cy="35.6" r="1.3" fill="#fff" opacity=".9"/><circle cx="32" cy="48.8" r="1.1" fill="#fff" opacity=".9"/></svg>`;
+  const bgW = ZW * SW / nailPx.w, bgH = ZH * SH / nailPx.h, bgX = -nailPx.x * SW / nailPx.w, bgY = -nailPx.y * SH / nailPx.h;
+  const plates = KINDS.map((kind, i) => {
+    const pl = document.createElement('div'); pl.className = 'plate pl-' + kind;
+    const poly = kind === 'naturel' ? NA.naturel : NA.ongle;
+    pl.innerHTML = `<div class="fill" style="clip-path:${clipP(poly)}">${kind === 'art' ? ART : ''}</div><svg class="edge" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="${edgeP(poly)}"/></svg><i class="num" style="left:${tip[0]}%;top:${tip[1]}%">${i + 1}</i>`;
+    if (kind === 'naturel' || kind === 'couleur') Object.assign(pl.querySelector('.fill').style, { backgroundImage: 'url(../site/img/anatomie-ongle.webp)', backgroundSize: `${bgW}px ${bgH}px`, backgroundPosition: `${bgX}px ${bgY}px` });
+    $('#stack').appendChild(pl); return pl;
+  });
+  const labs = COUCHES.map(([nm, d], i) => {
+    const el = document.createElement('div'); el.className = 'lab';
+    el.innerHTML = `<span class="n">0${i + 1}</span><b>${nm}</b><em>${d} min</em>`;
+    $('#s1-labs').appendChild(el); return el;
+  });
+  $('#s1-t').style.top = TOP + 'px';
+  $('#s1-labs').style.bottom = BOT + 'px';
+  if (L) { side($('#s1-labs'), { left: 100, right: 1180 }); side($('#s1-tot'), { left: 100, right: 1000 }); }
+  $('#s1-tot').style.top = (TOP + (V ? 290 : 262)) + 'px';
+  cue(.7, 'whoosh'); COUCHES.forEach((_, i) => cue(1.35 + i * .17, 'pop')); cue(3.7, 'sparkle');
+  function s1(t) {
+    rev($$('#s1-t .ln > span')[0], t, .2); rev($$('#s1-t .ln > span')[1], t, .38);
+    // la macro dézoome jusqu'à la taille de la pile, puis s'efface
+    const zk = eio(k01(t, .65, .8)), S = sStart * Math.pow(sEnd / sStart, zk);
+    const cx = lerp(W / 2, SC.x, zk), cy = lerp(H * .52, SC.y, zk);
+    const ph = $('#s1-ph');
+    Object.assign(ph.style, { width: ZW + 'px', height: ZH + 'px', left: '0px', top: '0px' });
+    ph.style.transform = `translate(${(cx - (nailPx.x + nailPx.w / 2) * S).toFixed(1)}px,${(cy - (nailPx.y + nailPx.h / 2) * S).toFixed(1)}px) scale(${S.toFixed(4)})`;
+    ph.style.opacity = (1 - eio(k01(t, 1.0, .5))).toFixed(3);
+    $('#s1-veil').style.opacity = 1 - eo(k01(t, 1.2, .5));
+    const ps = S / sEnd, ek = eio(k01(t, 1.25, 1.2));
+    $('#stack').style.transform = `translate(${(cx - SC.x).toFixed(1)}px,${(cy - SC.y + 40 * ek).toFixed(1)}px) scale(${(ps * lerp(1, .82, ek)).toFixed(4)}) rotateX(${(56 * ek).toFixed(2)}deg) rotateZ(${(-9 * ek).toFixed(2)}deg)`;
+    $('#stack').style.opacity = k01(t, .55, .15);
+    plates.forEach((pl, i) => {
+      const e = eio(k01(t, 1.25 + i * .06, 1.1));
+      pl.style.transform = `translateZ(${(i * (V ? 70 : 62) * e).toFixed(1)}px)`;
+      pl.querySelector('.num').style.opacity = k01(t, 1.35 + i * .17, .3);
+    });
+    labs.forEach((el, i) => { const k = k01(t, 1.35 + i * .17, .35); el.style.opacity = k; el.style.transform = `translateX(${((1 - eo(k)) * -30).toFixed(1)}px)`; });
+    $('#s1-tot').style.opacity = eo(k01(t, 3.2, .5));
+  }
+
+  /* ---------- Scène 2 : la marque ---------- */
+  addShim(4.6, $('#s2'), .6);
+  $('#s2-box').style.top = (L ? 90 : V ? TOP + 300 : TOP + 110) + 'px';
+  cue(5.3, 'sparkle');
+  function s2(t) {
+    const d = $('#s2-disc'), kd = k01(t, 4.9, .7);
+    d.style.transform = `scale(${(.3 + .7 * eob(kd)).toFixed(4)}) rotate(${((t - 4.9) * 22).toFixed(1)}deg)`; d.style.opacity = kd > 0 ? 1 : 0;
+    rev($('#s2-a'), t, 5.1); rev($('#s2-b'), t, 5.3, .65); rev($('#s2-eb'), t, 5.8);
+    [...$('#s2-chips').children].forEach((el, i) => pop(el, t, 6.3 + i * .15, .45));
+    $('#s2-b').style.backgroundPosition = `${(50 + 30 * Math.sin((t - 5) * .8)).toFixed(1)}% 50%`;
+  }
+  [6.3, 6.45, 6.6].forEach(x => cue(x, 'pop'));
+
+  /* ---------- Scène 3 : essayez la couleur ---------- */
+  const E = { cv: $('#s3-cv'), W: 935, H: 704, im: {} };
+  E.ctx = E.cv.getContext('2d');
+  const cvW = L ? 1060 : V ? 1000 : 960, cvH = cvW * 704 / 935, cvY = L ? 140 : V ? TOP + 330 : TOP + 262;
+  Object.assign(E.cv.style, { width: cvW + 'px', height: cvH + 'px', [mirror('left')]: (L ? 760 : (W - cvW) / 2) + 'px', top: cvY + 'px' });
+  $('#s3-t').style.top = TOP + 'px';
+  $('#s3-lab').style.top = (cvY + cvH + (V ? 70 : 34)) + 'px';
+  $('#s3-sw').style.top = (cvY + cvH + (V ? 190 : 124)) + 'px';
+  if (L) { side($('#s3-lab'), { left: 100, right: 1210, top: 440 }); side($('#s3-sw'), { left: 100, right: 1210, top: 600, flexWrap: 'wrap', justifyContent: 'flex-start', gap: '18px' }); }
+  const TE = [['#EFE2D6', 'N-01', 'brillant'], ['#E2B4A9', 'N-02', 'brillant'], ['#CD978A', 'N-03', 'mat'], ['#5B0E22', 'R-05', 'brillant'],
+    ['#B0122C', 'R-06', 'paillete'], ['#1C2C58', 'C-10', 'chrome'], ['#93A98C', 'C-09', 'mat'], ['#151114', 'C-12', 'brillant']].map((x, i) => [T.te[i], ...x]);
+  const FIN = T.fin;
+  const T3 = TE.map((_, i) => 9.8 + i * 1.2);
+  T3.forEach(x => cue(x, 'brush', .7));
+  const mk = () => { const c = document.createElement('canvas'); c.width = E.W; c.height = E.H; return c; };
+  const layers = TE.map(() => mk()), gl = mk(), tmp = mk();
+  (function glitter() { const g = gl.getContext('2d'); let sd = 11; const r = () => (sd = (sd * 16807) % 2147483647) / 2147483647; const cols = ['#ffffff', '#fff3cf', '#e2e2f2', '#ffd9e8', '#d8f2ff']; for (let i = 0; i < 16000; i++) { g.globalAlpha = .25 + r() * .75; g.fillStyle = cols[i % 5]; g.beginPath(); g.arc(r() * E.W, r() * E.H, .4 + r() * 1.3, 0, 7); g.fill(); } })();
+  function paint(cv, hex, fin) {
+    const g = cv.getContext('2d');
+    g.globalCompositeOperation = 'source-over'; g.globalAlpha = 1; g.clearRect(0, 0, E.W, E.H);
+    g.drawImage(E.im.ombre, 0, 0, E.W, E.H);
+    g.globalCompositeOperation = 'multiply'; g.fillStyle = hex; g.fillRect(0, 0, E.W, E.H);
+    if (fin === 'chrome') { g.globalCompositeOperation = 'overlay'; g.globalAlpha = .9; g.drawImage(E.im.chrome, 0, 0, E.W, E.H); g.globalAlpha = 1; }
+    if (fin === 'paillete') { g.globalCompositeOperation = 'screen'; g.globalAlpha = .85; g.drawImage(gl, 0, 0); g.globalAlpha = 1; }
+    if (fin === 'mat') { g.globalCompositeOperation = 'screen'; g.fillStyle = 'rgba(255,255,255,.07)'; g.fillRect(0, 0, E.W, E.H); }
+    g.globalCompositeOperation = 'destination-in'; g.drawImage(E.im.masque, 0, 0, E.W, E.H);
+    g.globalCompositeOperation = 'screen'; g.globalAlpha = { brillant: .95, mat: .1, chrome: 1, paillete: .75 }[fin]; g.drawImage(E.im.reflets, 0, 0, E.W, E.H);
+    if (fin === 'chrome') g.drawImage(E.im.reflets, 0, 0, E.W, E.H);
+    g.globalAlpha = 1; g.globalCompositeOperation = 'source-over';
+  }
+  const swEls = TE.map(([nm, hex]) => { const el = document.createElement('i'); el.className = 'sw'; el.style.setProperty('--c', hex); el.style.width = el.style.height = (V ? 96 : 92) + 'px'; $('#s3-sw').appendChild(el); return el; });
+  function s3(t) {
+    panelUp($('#s3'), t, 8.9, .42);
+    rev($$('#s3-t .ln > span')[0], t, 9.2); rev($$('#s3-t .ln > span')[1], t, 9.35);
+    const g = E.ctx;
+    if (!E.ok) return;
+    g.drawImage(E.im.photo, 0, 0, E.W, E.H);
+    let i = -1; T3.forEach((x, j) => { if (t >= x) i = j; });
+    if (i >= 0) {
+      if (i > 0) g.drawImage(layers[i - 1], 0, 0);
+      const k = eo(k01(t, T3[i], .7));
+      const tc = tmp.getContext('2d'); tc.globalCompositeOperation = 'source-over'; tc.clearRect(0, 0, E.W, E.H); tc.drawImage(layers[i], 0, 0);
+      const ux = .54, uy = .84, d = lerp(-60, E.W * ux + E.H * uy + 60, k);
+      const gr = tc.createLinearGradient(ux * (d - 90), uy * (d - 90), ux * d, uy * d); gr.addColorStop(0, 'rgba(0,0,0,1)'); gr.addColorStop(1, 'rgba(0,0,0,0)');
+      tc.globalCompositeOperation = 'destination-in'; tc.fillStyle = gr; tc.fillRect(0, 0, E.W, E.H);
+      g.drawImage(tmp, 0, 0);
+      const [nm, hex, ref, fin] = TE[i];
+      $('#s3-name').textContent = nm; $('#s3-dot').style.background = hex; $('#s3-ref').textContent = `${ref} · ${FIN[fin]}`;
+    }
+    $('#s3-lab').style.opacity = i >= 0 ? 1 : 0;
+    swEls.forEach((el, j) => { const on = j === i; el.style.transform = `scale(${on ? 1.16 : .86})`; el.style.outline = on ? '3px solid #1F1418' : 'none'; el.style.outlineOffset = '5px'; el.style.opacity = eo(k01(t, 9.3 + j * .05, .3)); });
+  }
+
+  /* ---------- Scène 4 : quelle forme ? ---------- */
+  addShim(19.3, $('#s4'), .6);
+  const EXT = {
+    carre: s => { const d = s * 144; if (d <= 74) return [162, 150 - d]; if (d <= 96) { const a = (d - 74) / 22 * Math.PI / 2; return [148 + 14 * Math.cos(a), 76 - 14 * Math.sin(a)]; } return [148 - (d - 96), 62]; },
+    ovale: s => { const a = s * Math.PI / 2; return [100 + 62 * Math.cos(a), 150 - 104 * Math.sin(a)]; },
+    amande: s => [100 + 62 * Math.pow(1 - Math.pow(s, 2.2), .5), 150 - 120 * s],
+    ballerine: s => { const d = s * 140.8; if (d <= 117.4) { const u = d / 117.4; return [lerp(162, 121, u), lerp(150, 40, u)]; } if (d <= 126.8) { const u = (d - 117.4) / 9.4, v = 1 - u; return [v * v * 121 + 2 * v * u * 119 + u * u * 114, v * v * 40 + 2 * v * u * 34 + u * u * 34]; } return [114 - (d - 126.8), 34]; },
+    stiletto: s => [100 + 62 * Math.pow(1 - s, .9), 150 - 146 * s]
+  };
+  function outline(kind) {
+    const r = [];
+    for (let i = 0; i <= 6; i++) { const a = i / 6; r.push([100 + 62 * Math.sin(a * Math.PI / 2), 278 + 24 * Math.cos(a * Math.PI / 2)]); }
+    for (let i = 1; i <= 5; i++) { const s = i / 5; r.push([162 + 2 * Math.sin(s * Math.PI), 278 - 128 * s]); }
+    for (let i = 1; i <= 16; i++) r.push(EXT[kind](i / 16));
+    return r.concat(r.slice(1, -1).reverse().map(([x, y]) => [200 - x, y]));
+  }
+  function pathD(p) {
+    const n = p.length; let d = `M${p[0][0].toFixed(2)} ${p[0][1].toFixed(2)}`;
+    for (let i = 0; i < n; i++) { const p0 = p[(i - 1 + n) % n], p1 = p[i], p2 = p[(i + 1) % n], p3 = p[(i + 2) % n]; d += `C${(p1[0] + (p2[0] - p0[0]) / 6).toFixed(2)} ${(p1[1] + (p2[1] - p0[1]) / 6).toFixed(2)} ${(p2[0] - (p3[0] - p1[0]) / 6).toFixed(2)} ${(p2[1] - (p3[1] - p1[1]) / 6).toFixed(2)} ${p2[0].toFixed(2)} ${p2[1].toFixed(2)}`; }
+    return d + 'Z';
+  }
+  const SHAPES = ['carre', 'ovale', 'amande', 'ballerine', 'stiletto'].map((id, i) => [id, ...T.shapes[i]]);
+  const PTS = SHAPES.map(([id]) => outline(id));
+  const T4 = SHAPES.map((_, i) => 20.3 + i * 1.3);
+  T4.slice(1).forEach(x => cue(x - .1, 'whoosh'));
+  const svH = L ? 900 : V ? 900 : 700, svW = svH * 200 / 330, svY = L ? 90 : V ? TOP + 300 : TOP + 250;
+  Object.assign($('#s4-svg').style, { width: svW + 'px', height: svH + 'px', left: (L ? 1300 - svW / 2 : (W - svW) / 2) + 'px', top: svY + 'px' });
+  $('#s4-t').style.top = TOP + 'px';
+  const nm4 = SHAPES.map(([, nm]) => { const el = document.createElement('span'); el.className = 'pill'; el.textContent = nm; Object.assign(el.style, { font: '500 30px/1 var(--sans)', padding: '16px 24px', border: '2px solid #E1D6D4', background: '#fff' }); $('#s4-names').appendChild(el); return el; });
+  $('#s4-names').style.top = (svY + svH + (V ? 60 : 26)) + 'px';
+  $('#s4-desc').style.top = (svY + svH + (V ? 170 : 116)) + 'px';
+  if (L) { side($('#s4-names'), { left: 100, right: 1100, top: 440, justifyContent: 'flex-start' }); side($('#s4-desc'), { left: 100, right: 1100, top: 590, textAlign: 'left' }); }
+  function s4(t) {
+    rev($$('#s4-t .ln > span')[0], t, 19.8); rev($$('#s4-t .ln > span')[1], t, 19.95);
+    let i = 0; T4.forEach((x, j) => { if (t >= x) i = j; });
+    const k = eio(k01(t, T4[i] - .1, .55)), from = PTS[Math.max(0, i - 1)], to = PTS[i];
+    const P = from.map((p, j) => [lerp(p[0], to[j][0], k), lerp(p[1], to[j][1], k)]);
+    const d = pathD(P); $('#s4-path').setAttribute('d', d); $('#cpp').setAttribute('d', d);
+    nm4.forEach((el, j) => { const on = j === i; el.style.background = on ? '#1F1418' : '#fff'; el.style.color = on ? '#F6F2F1' : '#1F1418'; el.style.borderColor = on ? '#1F1418' : '#E1D6D4'; el.style.opacity = eo(k01(t, 20.0 + j * .06, .3)); });
+    $('#s4-desc').textContent = SHAPES[i][2];
+    $('#s4-desc').style.opacity = eo(k01(t, T4[i], .35));
+  }
+
+  /* ---------- Scène 5 : galerie ---------- */
+  const GAL = ['g-french', 'g-baby-boomer', 'g-chrome-bleu', 'g-art-lignes', 'g-rouge-perles', 'g-chrome-perle', 'g-bordeaux', 'g-rouge-court'].map((img, i) => [img, ...T.gal[i]]);
+  const T5 = GAL.map((_, i) => 27.0 + i * 1.2);
+  const gals = GAL.map(([img, ti, cat], i) => {
+    const el = document.createElement('div'); el.className = 'gal';
+    el.innerHTML = L ? `<img class="bg" src="../site/img/${img}.webp" alt=""><img class="fg" src="../site/img/${img}.webp" alt=""><div class="gcap" style="bottom:${BOT + 20}px;left:100px;right:auto;width:520px;display:grid;gap:10px"><b>${ti}</b><span>${cat}</span></div>` : `<img src="../site/img/${img}.webp" alt=""><div class="gcap" style="bottom:${BOT}px"><b>${ti}</b><span>${cat}</span></div>`;
+    $('#s5-gal').appendChild(el);
+    if (i > 0) addShim(T5[i] - .3, el, .55);
+    return el;
+  });
+  $('#s5-t').style.top = TOP + 'px';
+  function s5(t) {
+    circle($('#s5'), t, 26.7, .6);
+    rev($$('#s5-t .ln > span')[0], t, 27.0); rev($$('#s5-t .ln > span')[1], t, 27.15);
+    $('#s5-t').style.opacity = 1 - eo(k01(t, 28.6, .4));
+    gals.forEach((el, i) => {
+      const a = T5[i] - .3, b = i + 1 < T5.length ? T5[i + 1] + .3 : 38;
+      el.style.visibility = t >= a && t < b ? 'visible' : 'hidden';
+      el.querySelector('img').style.transform = `scale(${(1.12 - .1 * k01(t, a, 1.8)).toFixed(4)})`;
+      const cap = el.querySelector('.gcap'), kc = k01(t, T5[i] + .15, .35);
+      cap.style.opacity = kc; cap.style.transform = `translateY(${((1 - eo(kc)) * 30).toFixed(1)}px)`;
+    });
+  }
+
+  /* ---------- Scène 6 : hygiène ---------- */
+  $('#s6-t').style.top = TOP + 'px';
+  const hy = ['#h1', '#h2', '#h3'].map(s => $(s)), hy0 = L ? 110 : V ? TOP + 360 : TOP + 290, hg = L ? 300 : V ? 290 : 250;
+  if (L) { hy.forEach(el => side(el, { left: 1000, right: 90 })); $('#s6-t').style.fontSize = '86px'; }
+  hy.forEach((el, i) => { el.style.top = (hy0 + i * hg) + 'px'; cue(38.9 + i * .9, 'pop'); });
+  cue(37.35, 'whoosh');
+  function s6(t) {
+    panelUp($('#s6'), t, 37.35, .42);
+    rev($$('#s6-t .ln > span')[0], t, 37.8); rev($$('#s6-t .ln > span')[1], t, 37.95);
+    hy.forEach((el, i) => { const k = k01(t, 38.9 + i * .9, .5); el.style.opacity = Math.min(1, k * 2); el.style.transform = `translateX(${((1 - eo(k)) * 120).toFixed(1)}px)`; });
+  }
+
+  /* ---------- Scène 7 : la carte ---------- */
+  $('#s7-t').style.top = TOP + 'px';
+  $('#s7-rows').style.top = (TOP + (V ? 260 : 200)) + 'px';
+  $('#s7-note').style.top = (TOP + (V ? 260 : 200) + 3 * 150 + 40) + 'px';
+  if (L) { side($('#s7-rows'), { left: 900, right: 100, top: 180 }); side($('#s7-note'), { left: 100, right: 1100, top: 300 }); }
+  const rows = $$('.prow');
+  rows.forEach((_, i) => cue(45.0 + i * .6, 'pop')); cue(43.95, 'whoosh'); cue(47.2, 'sparkle');
+  function s7(t) {
+    panelUp($('#s7'), t, 43.95, .42);
+    rev($('#s7-t .ln > span'), t, 44.3);
+    rows.forEach((el, i) => { const k = k01(t, 45.0 + i * .6, .45); el.style.opacity = Math.min(1, k * 2); el.style.transform = `translateY(${((1 - eo(k)) * 40).toFixed(1)}px)`; });
+    $('#s7-note').style.opacity = eo(k01(t, 47.2, .5));
+  }
+
+  /* ---------- Scène 8 : réservation ---------- */
+  addShim(51.4, $('#s8'), .6);
+  $('#s8-box').style.top = (L ? 90 : V ? TOP + 260 : TOP + 80) + 'px';
+  $('#s8-demo').style.bottom = (V ? BOT - 60 : 34) + 'px';
+  cue(52.2, 'sparkle'); cue(53.3, 'pop');
+  function s8(t) {
+    const d = $('#s8-disc'), kd = k01(t, 51.8, .7); d.style.transform = `scale(${(.3 + .7 * eob(kd)).toFixed(4)}) rotate(${((t - 51.8) * 20).toFixed(1)}deg)`; d.style.opacity = kd > 0 ? 1 : 0;
+    rev($('#s8-a'), t, 52.1); rev($('#s8-eb'), t, 52.5); pop($('#s8-book'), t, 53.3, .5);
+    rev($('#s8-ig'), t, 54.0); rev($('#s8-ad'), t, 54.4); rev($('#s8-h'), t, 54.7);
+    $('#s8-demo').style.opacity = eo(k01(t, 53, .5)) * .9;
+  }
+
+  const SCENES = [[s1, '#s1', 0, 5.3], [s2, '#s2', 4.6, 9.4], [s3, '#s3', 8.9, 20.0], [s4, '#s4', 19.3, 27.4], [s5, '#s5', 26.7, 37.8], [s6, '#s6', 37.35, 44.4], [s7, '#s7', 43.95, 52.1], [s8, '#s8', 51.4, 60.1]]
+    .map(([fn, sel, a, b]) => ({ fn, el: $(sel), a, b }));
+  window.render = t => { for (const s of SCENES) { const on = t >= s.a && t < s.b; s.el.style.visibility = on ? 'visible' : 'hidden'; if (on) s.fn(t); } shims(t); };
+  window.CUES = CUES.sort((a, b) => a[0] - b[0]);
+  window.META = { W, H, fps: 30, duration: 60, beat: .6 };
+  const load = src => new Promise(res => { const i = new Image(); i.onload = () => res(i); i.onerror = () => res(i); i.src = src; });
+  Promise.all([document.fonts.ready, ...[...document.images].map(i => i.decode().catch(() => {})),
+    ...['essai.webp', 'essai-ombre.png', 'essai-masque.png', 'essai-reflets.png', 'tx-chrome.webp'].map(n => load('../site/img/' + n))]).then(r => {
+    const [photo, ombre, masque, reflets, chrome] = r.slice(-5);
+    Object.assign(E.im, { photo, ombre, masque, reflets, chrome });
+    TE.forEach(([, hex, , fin], i) => paint(layers[i], hex, fin));
+    E.ok = true;
+    window.render(0); window.READY = true;
+  });
+})();
+</script>
+</body>
+</html>

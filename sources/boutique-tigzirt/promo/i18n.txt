@@ -1,0 +1,199 @@
+fr: Tiziri, vidéo promo
+en: Tiziri, promo video
+es: Tiziri, vídeo promocional
+ar: تيزيري، فيديو ترويجي
+
+fr: <i class="dot"></i>En mouvement
+en: <i class="dot"></i>In motion
+es: <i class="dot"></i>En movimiento
+ar: <i class="dot"></i>في حركة
+
+fr: En boutique
+en: In the shop
+es: En la tienda
+ar: في المتجر
+
+fr: Une photo,
+en: One photo,
+es: Una foto,
+ar: صورة واحدة،
+
+fr: prise en boutique.
+en: taken in the shop.
+es: hecha en la tienda.
+ar: التُقطت في المتجر.
+
+fr: Détourage
+en: Cut-out
+es: Recorte
+ar: التفريغ
+
+fr: La pièce est détourée,
+en: The piece is cut out,
+es: La prenda se recorta,
+ar: تُفرَّغ القطعة،
+
+fr: sans rien changer.
+en: with nothing changed.
+es: sin cambiar nada.
+ar: دون أي تغيير.
+
+fr: Essayage
+en: Fitting
+es: Prueba
+ar: القياس
+
+fr: Elle la porte…
+en: Elle wears it…
+es: Elle se la pone…
+ar: ترتديها «إيل»…
+
+fr: et la pièce prend vie.
+en: and the piece comes to life.
+es: y la prenda cobra vida.
+ar: فتنبض القطعة بالحياة.
+
+fr: Couleurs relevées sur la photo
+en: Colours taken from the photo
+es: Colores tomados de la foto
+ar: ألوان مأخوذة من الصورة
+
+fr: Elle, notre mannequin en bois, essaie chaque pièce.
+en: Elle, our wooden mannequin, tries on every piece.
+es: Elle, nuestra maniquí de madera, se prueba cada prenda.
+ar: «إيل»، دميتنا الخشبية، تجرّب كل قطعة.
+
+fr: Boutique de mode · Tigzirt
+en: Fashion boutique · Tigzirt
+es: Tienda de moda · Tigzirt
+ar: متجر أزياء · تيقزيرت
+
+fr: Tiziri
+en: Tiziri
+es: Tiziri
+ar: Tiziri
+
+fr: La boutique <em>prend vie.</em>
+en: The shop <em>comes to life.</em>
+es: La tienda <em>cobra vida.</em>
+ar: المتجر <em>ينبض بالحياة.</em>
+
+fr: La garde-robe
+en: The wardrobe
+es: El armario
+ar: خزانة الملابس
+
+fr: Chaque pièce de la boutique,
+en: Every piece in the shop,
+es: Cada prenda de la tienda,
+ar: كل قطعة في المتجر،
+
+fr: en mouvement.
+en: in motion.
+es: en movimiento.
+ar: في حركة.
+
+fr: Le site
+en: The website
+es: La web
+ar: الموقع
+
+fr: Toute la garde-robe,
+en: The whole wardrobe,
+es: Todo el armario,
+ar: خزانة الملابس كلها،
+
+fr: en ligne.
+en: online.
+es: en línea.
+ar: على الإنترنت.
+
+fr: Accueil
+en: Home
+es: Inicio
+ar: الرئيسية
+
+fr: L’essayage
+en: The fitting
+es: El probador
+ar: القياس
+
+fr: Le défilé
+en: The runway
+es: El desfile
+ar: العرض
+
+fr: Chaque pièce
+en: Every piece
+es: Cada prenda
+ar: كل قطعة
+
+fr: En arabe aussi
+en: In Arabic too
+es: También en árabe
+ar: بالعربية أيضًا
+
+fr: hoshuko.github.io/tiziri
+en: hoshuko.github.io/tiziri
+es: hoshuko.github.io/tiziri
+ar: hoshuko.github.io/tiziri
+
+fr: Français
+en: Français
+es: Français
+ar: Français
+
+fr: English
+en: English
+es: English
+ar: English
+
+fr: Español
+en: Español
+es: Español
+ar: Español
+
+fr: Commander
+en: Order
+es: Pedir
+ar: اطلبوا
+
+fr: Une pièce vous plaît ?
+en: Like a piece?
+es: ¿Te gusta una prenda?
+ar: أعجبتكم قطعة؟
+
+fr: Écrivez-nous sur WhatsApp.
+en: Message us on WhatsApp.
+es: Escríbenos por WhatsApp.
+ar: راسلونا على واتساب.
+
+fr: T
+en: T
+es: T
+ar: T
+
+fr: Boutique · Tigzirt
+en: Boutique · Tigzirt
+es: Tienda · Tigzirt
+ar: متجر · تيقزيرت
+
+fr: Retrait en boutique · Livraison · Paiement à la livraison
+en: Collect in store · Delivery · Cash on delivery
+es: Recogida en tienda · Envío · Pago contra reembolso
+ar: استلام من المتجر · توصيل · الدفع عند الاستلام
+
+fr: Ce que vous voyez,
+en: What you see here,
+es: Lo que ves aquí,
+ar: ما ترونه هنا،
+
+fr: vous le trouvez en boutique.
+en: you’ll find in the shop.
+es: lo encuentras en la tienda.
+ar: تجدونه في المتجر.
+
+fr: Maquette de démonstration · coordonnées fictives
+en: Demo site · fictional contact details
+es: Web de demostración · datos de contacto ficticios
+ar: نموذج تجريبي · بيانات اتصال خيالية

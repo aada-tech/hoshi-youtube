@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Tiziri, vidéo promo</title>
+<style>
+@font-face { font-family: 'Instrument Serif'; font-style: normal; font-weight: 400; src: url(fonts/instrument-serif-latin-ext-400-normal.woff2) format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: 'Instrument Serif'; font-style: normal; font-weight: 400; src: url(fonts/instrument-serif-latin-400-normal.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: 'Instrument Serif'; font-style: italic; font-weight: 400; src: url(fonts/instrument-serif-latin-ext-400-italic.woff2) format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: 'Instrument Serif'; font-style: italic; font-weight: 400; src: url(fonts/instrument-serif-latin-400-italic.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: 'Geist'; font-style: normal; font-weight: 100 900; src: url(fonts/geist-latin-ext-wght-normal.woff2) format('woff2-variations'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: 'Geist'; font-style: normal; font-weight: 100 900; src: url(fonts/geist-latin-wght-normal.woff2) format('woff2-variations'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: 'Plex Arabic'; font-style: normal; font-weight: 500; src: url(fonts/ibm-plex-sans-arabic-arabic-500-normal.woff2) format('woff2'); unicode-range: U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC; }
+@font-face { font-family: 'Amiri'; font-style: normal; font-weight: 400; src: url(fonts/amiri-arabic-400-normal.woff2) format('woff2'); unicode-range: U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC; }
+:root { --chaux: #efe7da; --chaux2: #e5d9c6; --sable: #d8c6a8; --encre: #1c1714; --encre2: #5a5048; --argile: #b4532f; --argile2: #d9794f; --soleil: #ffd79c; --vert: #d7f3cd;
+  --display: 'Instrument Serif', 'Amiri', serif; --sans: 'Geist', 'Plex Arabic', sans-serif; }
+html, body { margin: 0; background: #000; }
+#stage { position: relative; width: var(--W); height: var(--H); overflow: hidden; background: var(--chaux); font-family: var(--sans); color: var(--encre); -webkit-font-smoothing: antialiased; }
+.scene { position: absolute; inset: 0; overflow: hidden; visibility: hidden; }
+.abs { position: absolute; }
+.ln { display: block; overflow: hidden; padding: .06em 0 .2em; margin: -.06em 0 -.2em; }
+.ln > span { display: inline-block; will-change: transform; }
+.title { font-family: var(--display); font-weight: 400; letter-spacing: -.012em; line-height: 1; margin: 0; }
+.title em { font-style: italic; color: var(--argile); }
+.dark .title em { color: var(--soleil); }
+.kick { margin: 0; font-weight: 500; letter-spacing: .26em; text-transform: uppercase; color: var(--encre2); }
+.kick > span { display: inline-flex; align-items: center; gap: 18px; }
+.kick > span::before { content: ''; width: 44px; height: 1.5px; background: currentColor; opacity: .7; }
+.dark .kick { color: rgba(239, 231, 218, .7); }
+.panel { position: absolute; overflow: hidden; border-radius: 30px; background: var(--chaux2); box-shadow: 0 50px 90px -50px rgba(28, 23, 20, .6); }
+.panel > img, .panel > canvas, .panel > i { position: absolute; }
+.fill { left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; }
+.pill { display: inline-flex; align-items: center; gap: 10px; border-radius: 999px; white-space: nowrap; }
+.dot { width: 12px; height: 12px; border-radius: 50%; background: #d4513a; box-shadow: 0 0 0 5px rgba(212, 81, 58, .2); }
+.vf { position: absolute; width: 64px; height: 64px; border: 0 solid var(--chaux); }
+.sw { display: inline-block; border-radius: 50%; box-shadow: 0 0 0 3px rgba(239, 231, 218, .9), 0 10px 20px -8px rgba(28, 23, 20, .5); }
+.card { position: absolute; }
+.card canvas { position: absolute; left: 0; top: 0; border-radius: 22px; box-shadow: 0 40px 60px -40px rgba(28, 23, 20, .6); }
+.card .lab { position: absolute; left: 0; right: 0; }
+.card b { display: block; font: 400 var(--nm) / 1.02 var(--display); }
+.card small { display: block; margin-top: 8px; font: 500 var(--pr) / 1 var(--sans); letter-spacing: .16em; text-transform: uppercase; opacity: .78; }
+.chip { display: inline-flex; align-items: center; height: var(--ch, 60px); padding: 0 28px; border-radius: 999px; border: 1.5px solid rgba(239, 231, 218, .35); color: rgba(239, 231, 218, .75); font: 500 var(--cf, 26px) / 1 var(--sans); white-space: nowrap; }
+.chip.on { background: var(--chaux); border-color: var(--chaux); color: var(--encre); }
+.lang { display: inline-flex; align-items: center; height: 58px; padding: 0 26px; border-radius: 999px; background: rgba(239, 231, 218, .12); border: 1.5px solid rgba(239, 231, 218, .3); color: var(--chaux); font: 500 26px / 1 var(--sans); white-space: nowrap; }
+.phone { position: absolute; border-radius: 58px; background: #0f0c0b; box-shadow: 0 60px 90px -40px rgba(0, 0, 0, .8), inset 0 0 0 2px #3a322d; }
+.phone .scr { position: absolute; overflow: hidden; background: var(--chaux); }
+.phone .scr img { position: absolute; left: 0; width: 100%; }
+.phone .notch { position: absolute; left: 50%; width: 32%; height: 30px; border-radius: 20px; background: #0f0c0b; transform: translateX(-50%); }
+.desk { position: absolute; border-radius: 18px; overflow: hidden; background: #2a2320; box-shadow: 0 60px 90px -40px rgba(0, 0, 0, .8); }
+.desk .bar { position: absolute; left: 0; right: 0; top: 0; height: 44px; display: flex; align-items: center; gap: 10px; padding: 0 18px; }
+.desk .bar i { width: 13px; height: 13px; border-radius: 50%; background: #5a4f48; }
+.desk .bar span { margin-left: 18px; height: 28px; padding: 0 18px; border-radius: 8px; background: #3a322d; color: rgba(239, 231, 218, .7); font: 500 16px/28px var(--sans); }
+.desk .scr { position: absolute; left: 0; top: 44px; overflow: hidden; background: var(--chaux); }
+.desk .scr img { position: absolute; left: 0; width: 100%; }
+.chat { position: absolute; border-radius: 34px; overflow: hidden; background: #efe6d6; box-shadow: 0 50px 90px -50px rgba(28, 23, 20, .6); }
+.chat .hd { position: absolute; left: 0; right: 0; top: 0; display: flex; align-items: center; gap: 22px; background: var(--encre); color: var(--chaux); }
+.chat .av { display: grid; place-items: center; border-radius: 50%; background: var(--argile); font: italic 400 44px/1 var(--display); color: var(--chaux); }
+.chat .hd b { display: block; font: 600 30px/1.1 var(--sans); }
+.chat .hd small { display: block; margin-top: 6px; font: 400 20px/1 var(--sans); opacity: .7; }
+.bub { position: absolute; border-radius: 26px; padding: 22px 26px 16px; font: 400 var(--bf, 30px) / 1.38 var(--sans); box-shadow: 0 8px 18px -12px rgba(28, 23, 20, .35); }
+.bub.out { right: 34px; background: var(--vert); border-bottom-right-radius: 8px; }
+.bub.in { left: 34px; background: #fff; border-bottom-left-radius: 8px; }
+[dir="rtl"] .bub .tm { text-align: left; }
+.bub .tm { display: block; margin-top: 8px; text-align: right; font: 400 18px/1 var(--sans); color: rgba(28, 23, 20, .5); }
+.bub .tm i { font-style: normal; margin-left: 6px; color: rgba(28, 23, 20, .45); }
+.bub .tm i.read { color: #3b8fd6; }
+.prev { display: flex; gap: 18px; align-items: center; margin-bottom: 14px; padding: 12px; border-radius: 16px; background: rgba(255, 255, 255, .6); }
+.prev img { width: 96px; height: 128px; object-fit: cover; border-radius: 10px; }
+.prev b { display: block; font: 400 32px/1.05 var(--display); }
+.prev small { display: block; margin-top: 8px; font: 500 18px/1 var(--sans); color: rgba(28, 23, 20, .55); }
+#sweep { position: absolute; top: -10%; height: 120%; pointer-events: none; mix-blend-mode: screen; opacity: 0;
+  background: linear-gradient(90deg, rgba(255, 215, 156, 0), rgba(255, 215, 156, .55) 42%, rgba(255, 244, 222, .95) 50%, rgba(255, 215, 156, .55) 58%, rgba(255, 215, 156, 0)); filter: blur(6px); }
+</style>
+</head>
+<body>
+<div id="stage">
+  <!-- A. La photo prise en boutique, le détourage, puis Elle la porte et se met en marche -->
+  <section class="scene" id="sA">
+    <i class="abs" id="a-dark" style="inset:0;background:var(--encre)"></i>
+    <div class="panel" id="a-panel">
+      <img class="fill" id="a-raw" src="img/photo-boutique.jpg" alt="">
+      <img class="fill" id="a-vide" src="img/studio-vide.jpg" alt="">
+      <img class="fill" id="a-nu" src="img/elle-face.jpg" alt="">
+      <img id="a-cut" src="img/detourage.png" alt="">
+      <img class="fill" id="a-still" src="img/pull-leopard.jpg" alt="">
+      <canvas id="a-cv"></canvas>
+      <i id="a-flash" class="fill" style="background:radial-gradient(60% 50% at 50% 42%, rgba(255,244,222,.95), rgba(255,215,156,.4) 60%, rgba(255,215,156,0));opacity:0"></i>
+      <i id="a-scan" style="left:0;right:0;height:4px;background:var(--soleil);box-shadow:0 0 30px 10px rgba(255,215,156,.75);opacity:0"></i>
+      <i id="a-shut" class="fill" style="background:#fff;opacity:0"></i>
+      <span id="a-pill" class="pill abs" style="right:22px;top:22px;padding:12px 20px;background:rgba(239,231,218,.86);font:500 22px/1 var(--sans);opacity:0"><i class="dot"></i>En mouvement</span>
+    </div>
+    <i class="vf" id="vf1" style="border-top-width:5px;border-left-width:5px;border-top-left-radius:18px"></i>
+    <i class="vf" id="vf2" style="border-top-width:5px;border-right-width:5px;border-top-right-radius:18px"></i>
+    <i class="vf" id="vf3" style="border-bottom-width:5px;border-left-width:5px;border-bottom-left-radius:18px"></i>
+    <i class="vf" id="vf4" style="border-bottom-width:5px;border-right-width:5px;border-bottom-right-radius:18px"></i>
+    <div class="abs" id="a-t1">
+      <p class="kick ln"><span>En boutique</span></p>
+      <h2 class="title"><span class="ln"><span>Une photo,</span></span><span class="ln"><span><em>prise en boutique.</em></span></span></h2>
+    </div>
+    <div class="abs" id="a-t2">
+      <p class="kick ln"><span>Détourage</span></p>
+      <h2 class="title"><span class="ln"><span>La pièce est détourée,</span></span><span class="ln"><span><em>sans rien changer.</em></span></span></h2>
+    </div>
+    <div class="abs" id="a-t3">
+      <p class="kick ln"><span>Essayage</span></p>
+      <h2 class="title"><span class="ln"><span>Elle la porte…</span></span><span class="ln"><span><em>et la pièce prend vie.</em></span></span></h2>
+    </div>
+    <div class="abs" id="a-sw">
+      <p class="ln" style="margin:0 0 18px"><span id="a-swl" style="font:500 22px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--encre2)">Couleurs relevées sur la photo</span></p>
+      <div id="a-dots" style="display:flex;gap:22px"></div>
+    </div>
+    <p class="abs ln" id="a-sub" style="margin:0"><span style="font:400 var(--sub,30px)/1.3 var(--sans);color:var(--encre2)">Elle, notre mannequin en bois, essaie chaque pièce.</span></p>
+  </section>
+
+  <!-- B. La marque -->
+  <section class="scene" id="sB">
+    <img class="abs fill" id="b-img" src="img/studio-hero-large.jpg" alt="">
+    <i class="abs" id="b-scrim" style="inset:0"></i>
+    <div class="abs" id="b-box">
+      <p class="kick ln"><span>Boutique de mode · Tigzirt</span></p>
+      <div class="ln"><span id="b-name" class="title" style="line-height:.9">Tiziri</span></div>
+      <p class="title ln" id="b-tag" style="margin-top:.35em"><span>La boutique <em>prend vie.</em></span></p>
+    </div>
+  </section>
+
+  <!-- C. Les vraies pièces de la boutique, en mouvement -->
+  <section class="scene" id="sC" style="background:var(--chaux)">
+    <div class="abs" id="c-t">
+      <p class="kick ln"><span>La garde-robe</span></p>
+      <h2 class="title"><span class="ln"><span>Chaque pièce de la boutique,</span></span><span class="ln"><span><em>en mouvement.</em></span></span></h2>
+    </div>
+    <div class="abs" id="c-cards" style="inset:0"></div>
+  </section>
+
+  <!-- D. Le site, sur téléphone (et sur ordinateur en 16:9) -->
+  <section class="scene dark" id="sD" style="background:var(--encre);color:var(--chaux)">
+    <i class="abs" id="d-glow" style="inset:0;background:radial-gradient(60% 55% at 70% 55%, rgba(255,215,156,.16), rgba(255,215,156,0))"></i>
+    <div class="abs" id="d-t">
+      <p class="kick ln"><span>Le site</span></p>
+      <h2 class="title" id="d-h"><span class="ln"><span>Toute la garde-robe,</span></span><span class="ln"><span><em>en ligne.</em></span></span></h2>
+    </div>
+    <div class="abs" id="d-chips">
+      <span class="chip">Accueil</span>
+      <span class="chip">L’essayage</span>
+      <span class="chip">Le défilé</span>
+      <span class="chip">Chaque pièce</span>
+      <span class="chip">En arabe aussi</span>
+    </div>
+    <div class="desk" id="d-desk"><div class="bar"><i></i><i></i><i></i><span>hoshuko.github.io/tiziri</span></div><div class="scr" id="d-dscr"></div></div>
+    <div class="phone" id="d-phone"><div class="scr" id="d-pscr"></div><i class="notch"></i></div>
+    <div class="abs" id="d-langs" style="display:flex;flex-wrap:wrap;gap:14px">
+      <span class="lang">Français</span><span class="lang" style="font-family:'Plex Arabic',var(--sans)">العربية</span><span class="lang">English</span><span class="lang">Español</span>
+    </div>
+  </section>
+
+  <!-- E. Commander sur WhatsApp -->
+  <section class="scene" id="sE" style="background:var(--chaux)">
+    <i class="abs" style="inset:0;background:radial-gradient(70% 60% at 30% 30%, rgba(255,215,156,.35), rgba(255,215,156,0))"></i>
+    <div class="abs" id="e-t">
+      <p class="kick ln"><span>Commander</span></p>
+      <h2 class="title"><span class="ln"><span>Une pièce vous plaît ?</span></span><span class="ln"><span><em>Écrivez-nous sur WhatsApp.</em></span></span></h2>
+    </div>
+    <div class="chat" id="e-chat">
+      <div class="hd" id="e-hd"><span class="av" id="e-av">T</span><span><b>Tiziri</b><small>Boutique · Tigzirt</small></span></div>
+      <div class="bub out" id="e-out"><div class="prev"><img src="img/pull-leopard.jpg" alt=""><span><b id="e-pn"></b><small>hoshuko.github.io/tiziri</small></span></div><span id="e-typed"></span><span class="tm">10:24<i id="e-ticks">✓✓</i></span></div>
+      <div class="bub in" id="e-in"><span id="e-reply"></span><span class="tm">10:25</span></div>
+    </div>
+    <p class="abs ln" id="e-line" style="margin:0"><span style="font:500 var(--el,28px)/1.35 var(--sans);color:var(--encre2)">Retrait en boutique · Livraison · Paiement à la livraison</span></p>
+  </section>
+
+  <!-- F. Fin -->
+  <section class="scene" id="sF">
+    <img class="abs fill" id="f-img" src="img/wall-portrait.jpg" alt="">
+    <i class="abs" style="inset:0;background:linear-gradient(rgba(239,231,218,.25),rgba(239,231,218,.55))"></i>
+    <div class="abs" id="f-box" style="left:0;right:0;text-align:center">
+      <p class="kick ln"><span>Boutique de mode · Tigzirt</span></p>
+      <div class="ln"><span id="f-name" class="title" style="line-height:.9">Tiziri</span></div>
+      <p class="title ln" id="f-tag1" style="margin-top:.4em"><span>Ce que vous voyez,</span></p>
+      <p class="title ln" id="f-tag2"><span><em>vous le trouvez en boutique.</em></span></p>
+      <div id="f-langs" style="display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:48px">
+        <span class="pill fl">Français</span><span class="pill fl" style="font-family:'Plex Arabic',var(--sans)">العربية</span><span class="pill fl">English</span><span class="pill fl">Español</span>
+      </div>
+      <p class="ln" id="f-url" style="margin:40px 0 0"><span style="font:500 30px/1 var(--sans);letter-spacing:.04em;color:var(--encre)">hoshuko.github.io/tiziri</span></p>
+    </div>
+    <p class="abs" id="f-demo" style="left:0;right:0;margin:0;text-align:center;font:400 20px/1 var(--sans);color:rgba(28,23,20,.5)">Maquette de démonstration · coordonnées fictives</p>
+  </section>
+
+  <i id="sweep"></i>
+</div>
+
+<script src="data.js"></script>
+<script>
+(() => {
+  'use strict';
+  const $ = s => document.querySelector(s);
+  const $$ = s => [...document.querySelectorAll(s)];
+  const F = new URLSearchParams(location.search).get('f') || '45';
+  const V = F === '916', L = F === '169';
+  const W = L ? 1920 : 1080, H = L ? 1080 : V ? 1920 : 1350;
+  const pick = (l, p, v) => L ? l : V ? v : p;   // valeur en 16:9, en 4:5, en 9:16
+  document.documentElement.style.setProperty('--W', W + 'px');
+  document.documentElement.style.setProperty('--H', H + 'px');
+  const LG = document.documentElement.lang || 'fr';
+  const RTL = LG === 'ar';  // arabe : mise en page en miroir (place() échange gauche et droite)
+  if (RTL) document.documentElement.dir = 'rtl';
+  const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+  const lerp = (a, b, t) => a + (b - a) * t;
+  const k01 = (t, a, d) => clamp((t - a) / d);
+  const eo = t => 1 - Math.pow(1 - t, 3);
+  const eio = t => (t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+  const eob = t => { const c1 = 1.70158, c3 = c1 + 1; return 1 + c3 * Math.pow(t - 1, 3) + c1 * Math.pow(t - 1, 2); };
+  const CUES = [];
+  const cue = (t, type, arg) => CUES.push([+t.toFixed(3), type, arg == null ? null : arg]);
+  // lignes de titre : montent à l'entrée, repartent vers le haut à la sortie
+  const rev = (el, t, t0, d = .6, out = null) => {
+    const k = eo(k01(t, t0, d)), o = out == null ? 0 : eio(k01(t, out, .45));
+    el.style.transform = `translateY(${((1 - k) * 110 - o * 110).toFixed(2)}%)`;
+  };
+  const pop = (el, t, t0, d = .45) => { const k = k01(t, t0, d); el.style.opacity = k > 0 ? Math.min(1, k * 3) : 0; el.style.transform = `scale(${(.6 + .4 * eob(k)).toFixed(4)})`; };
+  const fade = (el, t, t0, d = .5, out = null, od = .4) => { el.style.opacity = (eo(k01(t, t0, d)) * (out == null ? 1 : 1 - k01(t, out, od))).toFixed(3); };
+  const mirror = k => RTL ? ({ left: 'right', right: 'left' }[k] || k) : k;
+  const place = (el, o) => Object.assign(el.style, Object.fromEntries(Object.entries(o).map(([k, v]) => [mirror(k), typeof v === 'number' ? v + 'px' : v])));
+  const lines = sel => $$(sel + ' .ln > span');
+
+  const T = {
+    fr: { price: 'Prix en boutique', moving: 'En mouvement',
+          ask: n => `Bonjour Tiziri 👋 La pièce « ${n} » m’intéresse. Taille : M`,
+          reply: 'Elle vous attend en boutique à Tigzirt. Ou on vous la livre, paiement à la livraison.' },
+    en: { price: 'Price in store', moving: 'In motion',
+          ask: n => `Hello Tiziri 👋 I’m interested in “${n}”. Size: M`,
+          reply: 'It’s waiting for you in the shop in Tigzirt. Or we deliver it: cash on delivery.' },
+    es: { price: 'Precio en tienda', moving: 'En movimiento',
+          ask: n => `Hola Tiziri 👋 Me interesa «${n}». Talla: M`,
+          reply: 'Te espera en la tienda de Tigzirt. O te la enviamos, con pago contra reembolso.' },
+    ar: { price: 'السعر في المتجر', moving: 'في حركة',
+          ask: n => `مرحبًا تيزيري 👋 تهمّني القطعة «${n}». المقاس: M`,
+          reply: 'إنها بانتظاركم في المتجر في تيقزيرت. أو نوصلها إليكم، والدفع عند الاستلام.' }
+  }[LG];
+  const P = window.PIECES;
+  const REAL = ['pull-leopard', 'robe-maille-grise', 'gilet-long-beige', 'pantalon-gris'];
+  const HERO = 'pull-leopard';
+
+  /* ---------- vidéos : images exactes (encodage image par image), copiées dans des canvas ---------- */
+  const FPS_V = 24, VIDS = {};
+  REAL.forEach(id => { const v = document.createElement('video'); v.src = `vid/${id}.mp4`; v.muted = true; v.preload = 'auto'; v.playsInline = true; VIDS[id] = { v, f: -1 }; });
+  const vidReady = Promise.all(Object.values(VIDS).map(o => new Promise(res => { if (o.v.readyState >= 2) res(); else o.v.addEventListener('loadeddata', res, { once: true }); setTimeout(res, 8000); })));
+  function seekFrame(id, vt) {
+    const o = VIDS[id], n = Math.round(o.v.duration * FPS_V) || 192;
+    const f = clamp(Math.floor(vt * FPS_V), 0, n - 1);
+    if (f === o.f) return null;
+    o.f = f;
+    return new Promise(res => { const done = () => { o.v.removeEventListener('seeked', done); res(); }; o.v.addEventListener('seeked', done); o.v.currentTime = (f + .5) / FPS_V; setTimeout(res, 4000); });
+  }
+  // Dessine la photo portée (« cover » dans le cadre) puis la vidéo posée exactement dessus, bords fondus, comme sur le site.
+  const still = {}, fin = {};
+  REAL.forEach(id => { const i = new Image(); i.src = `img/${id}.jpg`; still[id] = i; const f = new Image(); f.src = `img/${id}-fin.jpg`; fin[id] = f; });
+  const off = document.createElement('canvas'), octx = off.getContext('2d');
+  // Après la marche (vidéo plus courte que la scène), la pose de fin arrive en fondu, comme sur le site.
+  function drawLook(cv, id, withVideo, vt = 0) {
+    const ctx = cv.getContext('2d'), cw = cv.width, ch = cv.height, p = P[id];
+    const [sw, sh] = p.still, s = Math.max(cw / sw, ch / sh), dw = sw * s, dh = sh * s, dx = (cw - dw) / 2, dy = (ch - dh) / 2;
+    ctx.drawImage(still[id], dx, dy, dw, dh);
+    if (!withVideo) return;
+    const endK = clamp((vt - (p.duration || 8)) / .5);
+    if (endK >= 1) { ctx.drawImage(fin[id], dx, dy, dw, dh); return; }
+    const [l, t, w, h] = p.box, vx = dx + l * dw, vy = dy + t * dh, vw = w * dw, vh = h * dh;
+    off.width = Math.ceil(vw); off.height = Math.ceil(vh);
+    octx.globalCompositeOperation = 'source-over';
+    octx.drawImage(VIDS[id].v, 0, 0, off.width, off.height);
+    const g = octx.createLinearGradient(0, 0, off.width, 0);
+    g.addColorStop(0, 'rgba(0,0,0,0)'); g.addColorStop(.09, '#000'); g.addColorStop(.91, '#000'); g.addColorStop(1, 'rgba(0,0,0,0)');
+    octx.globalCompositeOperation = 'destination-in'; octx.fillStyle = g; octx.fillRect(0, 0, off.width, off.height);
+    ctx.drawImage(off, vx, vy);
+    if (endK > 0) { ctx.globalAlpha = endK; ctx.drawImage(fin[id], dx, dy, dw, dh); ctx.globalAlpha = 1; }
+  }
+
+  /* ---------- transition : un rai de lumière balaie l'image et découvre la scène suivante ---------- */
+  const sweep = $('#sweep'), SW = [];
+  const addSweep = (t0, el) => { SW.push({ t0, el }); cue(t0, 'sweep'); };
+  const SWD = .85;
+  function sweeps(t) {
+    let on = false;
+    SW.forEach(s => {
+      const k = eio(k01(t, s.t0, SWD));
+      if (t >= s.t0 && t < s.t0 + SWD) {
+        on = true;
+        const bw = W * .42, x = lerp(-bw * .5, W + bw * .5, k) - bw / 2;
+        place(sweep, { left: x, width: bw });
+        sweep.style.opacity = Math.sin(Math.PI * k).toFixed(3);
+        sweep.style.transform = 'skewX(-12deg)';
+      }
+      s.el.style.clipPath = t < s.t0 + SWD ? `inset(0 ${((1 - k) * 100).toFixed(2)}% 0 0)` : 'none';
+    });
+    if (!on) sweep.style.opacity = 0;
+  }
+
+  /* ================= A. photo → détourage → portée → en marche (0 – 19,2 s) ================= */
+  const PA = pick({ x: 1085, y: 90, w: 675, h: 900 }, { x: 210, y: 350, w: 660, h: 880 }, { x: 90, y: 540, w: 900, h: 1200 });
+  place($('#a-panel'), { left: PA.x, top: PA.y, width: PA.w, height: PA.h });
+  const TA = pick({ left: 150, width: 900, top: 330 }, { left: 80, right: 80, top: 70 }, { left: 90, right: 90, top: 200 });
+  const titleSize = pick(96, 76, 92), kickSize = pick(22, 19, 22);
+  ['#a-t1', '#a-t2', '#a-t3'].forEach(s => { place($(s), TA); $(s + ' .title').style.fontSize = titleSize + 'px'; $(s + ' .kick').style.cssText += `;font-size:${kickSize}px;margin-bottom:${pick(34, 22, 30)}px`; });
+  // en boutique, le cadre du viseur ; la photo prise, le déclic
+  const vfIn = 22;
+  [['#vf1', PA.x - vfIn, PA.y - vfIn], ['#vf2', PA.x + PA.w + vfIn - 64, PA.y - vfIn], ['#vf3', PA.x - vfIn, PA.y + PA.h + vfIn - 64], ['#vf4', PA.x + PA.w + vfIn - 64, PA.y + PA.h + vfIn - 64]]
+    .forEach(([s, x, y]) => place($(s), { left: x, top: y }));
+  cue(1.15, 'shutter');
+  // détourage : même cadrage que la photo (le détourage a été découpé dans la photo brute)
+  const HP = P[HERO], rs = PA.w / HP.raw[0];
+  const cutBox = { x: HP.crop.left * rs, y: HP.crop.top * rs, w: HP.crop.width * rs, h: HP.crop.height * rs };
+  place($('#a-cut'), { left: cutBox.x, top: cutBox.y, width: cutBox.w, height: cutBox.h });
+  // les couleurs relevées sur la photo
+  const SWS = pick(58, 46, 58);
+  HP.colors.forEach(c => { const d = document.createElement('i'); d.className = 'sw'; place(d, { width: SWS, height: SWS }); d.style.background = c; $('#a-dots').appendChild(d); });
+  place($('#a-sw'), pick({ left: 150, top: 690 }, { left: 80, top: PA.y + PA.h + 26 }, { left: 90, top: PA.y + PA.h + 44 }));
+  if (!L) { $('#a-sw').style.display = 'flex'; $('#a-sw').style.alignItems = 'center'; $('#a-sw').style.gap = '26px'; $('#a-sw p').style.margin = '0'; $('#a-swl').style.fontSize = pick(22, 16, 20) + 'px'; }
+  place($('#a-sub'), pick({ left: 150, width: 760, top: 700 }, { left: 80, right: 80, top: PA.y + PA.h + 30 }, { left: 90, right: 90, top: PA.y + PA.h + 48 }));
+  document.documentElement.style.setProperty('--sub', pick(34, 24, 32) + 'px');
+  const cv = $('#a-cv'); cv.width = PA.w; cv.height = PA.h; place(cv, { left: 0, top: 0 });
+  $('#a-pill').lastChild.textContent = T.moving;
+  cue(4.95, 'scan'); HP.colors.forEach((c, i) => cue(6.5 + i * .18, 'pop'));
+  cue(8.3, 'whoosh'); cue(9.35, 'glow');
+  const VA = 10.6;   // départ de la marche
+  function sA(t) {
+    // fond : la nuit du magasin, puis la lumière du studio
+    $('#a-dark').style.opacity = (1 - eio(k01(t, 4.9, 1.4))).toFixed(3);
+    ['#vf1', '#vf2', '#vf3', '#vf4'].forEach((s, i) => { const e = $(s); e.style.opacity = (eo(k01(t, .15 + i * .05, .4)) * (1 - k01(t, 4.4, .4))).toFixed(3); e.style.borderColor = 'var(--chaux)'; e.style.transform = `scale(${lerp(1.25, 1, eo(k01(t, .15, .6))).toFixed(3)})`; });
+    // 1. la photo (léger zoom), le déclic
+    $('#a-raw').style.transform = `scale(${lerp(1.08, 1, eo(k01(t, 0, 4.8))).toFixed(4)})`;
+    $('#a-shut').style.opacity = t >= 1.15 ? (.85 * (1 - eo(k01(t, 1.15, .45)))).toFixed(3) : 0;
+    // 2. la ligne de détourage descend : au-dessus, la pièce seule dans le studio
+    const ks = eio(k01(t, 4.95, 1.25));
+    $('#a-vide').style.clipPath = `inset(0 0 ${((1 - ks) * 100).toFixed(2)}% 0)`;
+    $('#a-scan').style.top = (ks * PA.h - 2).toFixed(1) + 'px';
+    $('#a-scan').style.opacity = t > 4.95 && t < 6.35 ? Math.sin(Math.PI * ks).toFixed(3) : 0;
+    const kc = t < 4.95 ? 0 : ks;
+    // la pièce flotte, puis rejoint le buste d'Elle
+    const fl = Math.sin((t - 6) * 1.9) * 6 * eo(k01(t, 6, .8)) * (1 - k01(t, 8.3, .6));
+    const kl = eio(k01(t, 8.3, 1.2));
+    const sc = lerp(lerp(1, .84, eio(k01(t, 5.6, 1.4))), .47, kl);
+    const cx = 0, cy = lerp(lerp(0, -.02, eio(k01(t, 5.6, 1.4))), -.135, kl) * PA.h;
+    const cut = $('#a-cut');
+    cut.style.clipPath = `inset(0 0 ${((1 - kc) * 100).toFixed(2)}% 0)`;
+    cut.style.transform = `translate(${cx.toFixed(1)}px, ${(cy + fl).toFixed(1)}px) scale(${sc.toFixed(4)})`;
+    cut.style.filter = `drop-shadow(0 ${(30 * (1 - kl)).toFixed(0)}px ${(40 * (1 - kl)).toFixed(0)}px rgba(28,23,20,${(.35 * (1 - kl)).toFixed(2)}))`;
+    cut.style.opacity = (1 - k01(t, 9.35, .5)).toFixed(3);
+    // Elle arrive sous la pièce, puis la porte (photo portée)
+    $('#a-nu').style.opacity = eo(k01(t, 8.1, .9)).toFixed(3);
+    $('#a-still').style.opacity = eo(k01(t, 9.35, .55)).toFixed(3);
+    const fk = k01(t, 9.3, .9);
+    $('#a-flash').style.opacity = (Math.sin(Math.PI * fk) * .85).toFixed(3);
+    // 3. elle se met en marche
+    let wait = null;
+    if (t >= VA - .05) { wait = seekFrame(HERO, t - VA); }
+    cv.style.opacity = t >= VA ? 1 : 0;
+    fade($('#a-pill'), t, VA + .1, .4);
+    // textes
+    const t1 = lines('#a-t1'), t2 = lines('#a-t2'), t3 = lines('#a-t3');
+    rev(t1[0], t, .35, .6, 4.5); rev(t1[1], t, .55, .6, 4.55); rev(t1[2], t, .75, .6, 4.6);
+    rev(t2[0], t, 5.15, .6, 9.0); rev(t2[1], t, 5.35, .6, 9.05); rev(t2[2], t, 5.55, .6, 9.1);
+    rev(t3[0], t, 9.55, .6); rev(t3[1], t, 9.75, .6); rev(t3[2], t, 9.95, .6);
+    $$('#a-t1 .kick, #a-t2 .kick, #a-t3 .kick').forEach(e => { e.style.color = t < 4.9 ? 'rgba(239,231,218,.7)' : ''; });
+    $$('#a-t1 .title').forEach(e => { e.style.color = 'var(--chaux)'; });
+    $$('#a-t1 .title em').forEach(e => { e.style.color = 'var(--soleil)'; });
+    rev($('#a-swl'), t, 6.2, .5, 8.9);
+    $$('#a-dots .sw').forEach((d, i) => { const k = k01(t, 6.5 + i * .18, .45); d.style.opacity = (Math.min(1, k * 3) * (1 - k01(t, 8.9, .4))).toFixed(3); d.style.transform = `scale(${(.4 + .6 * eob(k)).toFixed(3)})`; });
+    rev($('#a-sub span'), t, 12.2, .6);
+    return wait;
+  }
+  function sAdraw(t) { const ctx = cv.getContext('2d'); ctx.clearRect(0, 0, cv.width, cv.height); drawLook(cv, HERO, true, t - VA); }
+
+  /* ================= B. la marque (19,2 – 24,85 s) ================= */
+  addSweep(19.2, $('#sB'));
+  $('#b-img').src = `img/${V ? 'studio-hero-tall' : 'studio-hero-large'}.jpg`;
+  $('#b-img').style.objectPosition = pick('50% 50%', RTL ? '31% 50%' : '69% 50%', '50% 40%');  // en arabe, la photo est en miroir : les mannequins passent à gauche du titre
+  place($('#b-box'), pick({ left: 150, top: 300 }, { left: 80, top: 80 }, { left: 0, right: 0, top: 1170 }));
+  if (V) $('#b-box').style.textAlign = 'center';
+  if (V) $('#b-box .kick > span').style.justifyContent = 'center';
+  $('#b-name').style.fontSize = pick(250, 180, 240) + 'px';
+  $('#b-tag').style.fontSize = pick(84, 54, 76) + 'px';
+  $('#b-box .kick').style.fontSize = pick(24, 19, 22) + 'px';
+  $('#b-box .kick').style.marginBottom = pick(30, 22, 28) + 'px';
+  $('#b-scrim').style.background = V ? 'linear-gradient(rgba(239,231,218,0) 50%, rgba(239,231,218,.75) 75%)' : L ? `linear-gradient(${RTL ? 270 : 90}deg, rgba(239,231,218,.55), rgba(239,231,218,0) 55%)` : 'linear-gradient(rgba(239,231,218,.6), rgba(239,231,218,0) 45%)';
+  cue(19.3, 'impact'); cue(19.75, 'sparkle');
+  function sB(t) {
+    $('#b-img').style.transform = `${RTL ? 'scaleX(-1) ' : ''}scale(${lerp(1.1, 1, eo(k01(t, 19.2, 5.4))).toFixed(4)})`;
+    rev($('#b-box .kick > span'), t, 19.6); rev($('#b-name'), t, 19.8, .75); rev($('#b-tag > span'), t, 20.3, .7);
+  }
+
+  /* ================= C. les quatre vraies pièces, en mouvement (24 – 34,45 s) ================= */
+  addSweep(24.0, $('#sC'));
+  place($('#c-t'), pick({ left: 130, right: 130, top: 70 }, { left: 80, right: 80, top: 64 }, { left: 71, right: 71, top: 170 }));
+  $('#c-t .title').style.fontSize = pick(84, 60, 80) + 'px';
+  $('#c-t .kick').style.cssText += `;font-size:${pick(21, 18, 21)}px;margin-bottom:${pick(24, 18, 26)}px`;
+  if (L) { const h = $('#c-t .title'); h.style.display = 'flex'; h.style.gap = '.25em'; }
+  const CW = pick(390, 390, 454), CH = pick(520, 487, 567), GAP = pick(34, 26, 30);
+  const cardPos = i => L ? [(W - (4 * CW + 3 * GAP)) / 2 + i * (CW + GAP), 300] : [(W - (2 * CW + GAP)) / 2 + (i % 2) * (CW + GAP), pick(0, 262, 452) + Math.floor(i / 2) * (CH + GAP)];
+  document.documentElement.style.setProperty('--nm', pick(38, 32, 36) + 'px');
+  document.documentElement.style.setProperty('--pr', pick(17, 14, 16) + 'px');
+  const C0 = 24.55;
+  const cards = REAL.map((id, i) => {
+    const el = document.createElement('div'); el.className = 'card';
+    const [x, y] = cardPos(i); place(el, { left: x, top: y, width: CW, height: CH });
+    const c = document.createElement('canvas'); c.width = CW; c.height = CH; el.appendChild(c);
+    const lab = document.createElement('div'); lab.className = 'lab';
+    lab.innerHTML = `<b></b><small></small>`;
+    lab.querySelector('b').textContent = P[id].name[LG] || P[id].name.fr;
+    lab.querySelector('small').textContent = P[id].price == null ? T.price : P[id].price;
+    if (L) { place(lab, { top: CH + 22 }); lab.style.color = 'var(--encre)'; }
+    else { place(lab, { bottom: 0, left: 0, right: 0 }); Object.assign(lab.style, { padding: pick(0, '60px 22px 20px', '70px 26px 24px'), borderRadius: '0 0 22px 22px', background: 'linear-gradient(rgba(28,23,20,0), rgba(28,23,20,.72))', color: 'var(--chaux)' }); }
+    el.appendChild(lab); $('#c-cards').appendChild(el);
+    cue(C0 + i * .32, 'pop');
+    return { el, c, id, t0: C0 + i * .32, v0: C0 + .35 + i * .32 };
+  });
+  function sC(t) {
+    const ls = lines('#c-t'); rev(ls[0], t, 24.35); rev(ls[1], t, 24.5); rev(ls[2], t, 24.65);
+    const waits = [];
+    cards.forEach(o => {
+      const k = k01(t, o.t0, .6);
+      o.el.style.opacity = Math.min(1, k * 2.5).toFixed(3);
+      o.el.style.transform = `translateY(${((1 - eob(k)) * 90).toFixed(1)}px)`;
+      if (t >= o.v0) { const w = seekFrame(o.id, t - o.v0); if (w) waits.push(w); }
+    });
+    return waits.length ? Promise.all(waits) : null;
+  }
+  function sCdraw(t) { cards.forEach(o => { const ctx = o.c.getContext('2d'); ctx.clearRect(0, 0, CW, CH); drawLook(o.c, o.id, t >= o.v0, t - o.v0); }); }
+
+  /* ================= D. le site (33,6 – 46,45 s) ================= */
+  addSweep(33.6, $('#sD'));
+  const STEPS = ['hero', 'cabine', 'defile', 'piece', 'ar-hero'];
+  const TS = [34.1, 36.6, 39.0, 41.4, 43.7];
+  place($('#d-t'), pick({ left: 110, right: 110, top: 64 }, { left: 80, right: 80, top: 64 }, { left: 90, right: 90, top: 150 }));
+  $('#d-h').style.fontSize = pick(80, 64, 84) + 'px';
+  $('#d-t .kick').style.cssText += `;font-size:${pick(21, 18, 21)}px;margin-bottom:${pick(22, 18, 26)}px`;
+  if (L) { const h = $('#d-h'); h.style.display = 'flex'; h.style.gap = '.25em'; }
+  const shot = (kind, s) => { const [lang, v] = s === 'ar-hero' ? ['ar', 'hero'] : [LG, s]; return `site/${lang}-${kind}-${v}.jpg`; };
+  // téléphone
+  const PW = pick(300, 400, 520), PB = pick(12, 14, 16), PHh = PW * 1688 / 780;
+  const PX = pick(1920 - 300 - 2 * 12 - 150, 1080 - 400 - 28 - 86, (1080 - 520 - 32) / 2), PY = pick(330, 322, 470);
+  place($('#d-phone'), { left: PX, top: PY, width: PW + 2 * PB, height: PHh + 2 * PB });
+  place($('#d-pscr'), { left: PB, top: PB, width: PW, height: PHh, borderRadius: PW * .13 });
+  $('#d-phone').style.borderRadius = (PW * .13 + PB) + 'px';
+  place($('#d-phone .notch'), { top: PB + 12, height: PW * .075 });
+  const pimgs = STEPS.map(s => { const i = new Image(); i.src = shot('m', s); i.style.height = PHh + 'px'; $('#d-pscr').appendChild(i); return i; });
+  // ordinateur (16:9 seulement)
+  let dimgs = [];
+  if (L) {
+    const DW = 1100, DH = DW * 900 / 1440;
+    place($('#d-desk'), { left: 110, top: 300, width: DW, height: DH + 44 });
+    place($('#d-dscr'), { width: DW, height: DH });
+    dimgs = STEPS.map(s => { const i = new Image(); i.src = shot('d', s); i.style.height = DH + 'px'; $('#d-dscr').appendChild(i); return i; });
+  } else $('#d-desk').style.display = 'none';
+  // étapes de la visite
+  const chips = $$('#d-chips .chip');
+  document.documentElement.style.setProperty('--ch', pick(52, 60, 64) + 'px');
+  document.documentElement.style.setProperty('--cf', pick(22, 24, 30) + 'px');
+  if (L) { place($('#d-chips'), { left: 110, top: 222 }); Object.assign($('#d-chips').style, { display: 'flex', gap: '12px' }); }
+  else if (V) { place($('#d-chips'), { left: 0, right: 0, top: PY + PHh + 2 * PB + 36 }); Object.assign($('#d-chips').style, { height: '70px' }); chips.forEach(c => { c.style.position = 'absolute'; c.style.left = '50%'; }); }
+  else { place($('#d-chips'), { left: 80, top: 360 }); Object.assign($('#d-chips').style, { display: 'grid', gap: '16px', justifyItems: 'start' }); }
+  place($('#d-langs'), pick({ right: 110, top: 225 }, { left: 80, top: 360 + 5 * 76 + 40, width: 440 }, { left: 60, right: 60, top: PY + PHh + 2 * PB + 122 }));
+  if (V) $('#d-langs').style.justifyContent = 'center';
+  if (L) $$('#d-langs .lang').forEach(e => { e.style.height = '46px'; e.style.fontSize = '20px'; e.style.padding = '0 18px'; });
+  TS.forEach((x, i) => { if (i) cue(x, 'swipe'); cue(x + .05, 'tap'); });
+  cue(44.3, 'sparkle');
+  function sD(t) {
+    const ls = lines('#d-t'); rev(ls[0], t, 34.0); rev(ls[1], t, 34.15); rev(ls[2], t, 34.3);
+    const kp = eo(k01(t, 33.9, .9));
+    $('#d-phone').style.transform = `translateY(${((1 - kp) * 160).toFixed(1)}px)`; $('#d-phone').style.opacity = Math.min(1, kp * 2).toFixed(3);
+    if (L) { const kd = eo(k01(t, 33.75, .9)); $('#d-desk').style.transform = `translateY(${((1 - kd) * 120).toFixed(1)}px)`; $('#d-desk').style.opacity = Math.min(1, kd * 2).toFixed(3); }
+    let act = 0; TS.forEach((x, i) => { if (t >= x) act = i; });
+    // chaque écran arrive comme au défilement (glisse du bas), le précédent remonte un peu
+    const slide = (imgs, hgt) => imgs.forEach((im, i) => {
+      const k = i === 0 ? 1 : eio(k01(t, TS[i], .6)), nk = i < imgs.length - 1 ? eio(k01(t, TS[i + 1], .6)) : 0;
+      im.style.top = ((1 - k) * hgt - nk * hgt * .25).toFixed(1) + 'px';
+      im.style.visibility = (i === 0 || t >= TS[i]) && nk < 1 ? 'inherit' : 'hidden';
+      im.style.filter = nk > 0 ? `brightness(${(1 - .35 * nk).toFixed(3)})` : 'none';
+    });
+    slide(pimgs, PHh); if (L) slide(dimgs, 1100 * 900 / 1440);
+    chips.forEach((c, i) => {
+      if (V) {
+        const k = k01(t, TS[i], .45), o = i < 4 ? k01(t, TS[i + 1] - .1, .3) : 0;
+        c.style.opacity = (Math.min(1, k * 2) * (1 - o)).toFixed(3); c.classList.add('on');
+        c.style.transform = `translateX(-50%) translateY(${((1 - eo(k)) * 30 - o * 20).toFixed(1)}px)`;
+      } else {
+        c.classList.toggle('on', i === act && t >= TS[0]);
+        c.style.opacity = eo(k01(t, 34.4 + i * .1, .4)).toFixed(3);
+      }
+    });
+    $$('#d-langs .lang').forEach((e, i) => pop(e, t, 44.3 + i * .12, .45));
+  }
+
+  /* ================= E. commander sur WhatsApp (45,6 – 53,65 s) ================= */
+  addSweep(45.6, $('#sE'));
+  place($('#e-t'), pick({ left: 140, width: 860, top: 330 }, { left: 80, right: 80, top: 64 }, { left: 80, right: 80, top: 190 }));
+  $('#e-t .title').style.fontSize = pick(76, 62, 82) + 'px';
+  $('#e-t .kick').style.cssText += `;font-size:${pick(21, 18, 21)}px;margin-bottom:${pick(30, 18, 26)}px`;
+  const EC = pick({ x: 1060, y: 200, w: 700, h: 680 }, { x: 100, y: 300, w: 880, h: 690 }, { x: 70, y: 540, w: 940, h: 800 });
+  place($('#e-chat'), { left: EC.x, top: EC.y, width: EC.w, height: EC.h });
+  const HDH = pick(118, 118, 130);
+  place($('#e-hd'), { height: HDH, padding: '0 30px' });
+  place($('#e-av'), { width: HDH - 44, height: HDH - 44 });
+  document.documentElement.style.setProperty('--bf', pick(28, 28, 32) + 'px');
+  const name = P[HERO].name[LG] || P[HERO].name.fr;
+  $('#e-pn').textContent = name;
+  const ask = T.ask(name), reply = T.reply;
+  place($('#e-out'), { top: HDH + 34, maxWidth: EC.w * .8 });
+  place($('#e-in'), { maxWidth: EC.w * .8 });
+  document.documentElement.style.setProperty('--el', pick(30, 24, 32) + 'px');
+  place($('#e-line'), pick({ left: 140, width: 860, top: 600 }, { left: 80, right: 80, top: EC.y + EC.h + 40 }, { left: 80, right: 80, top: EC.y + EC.h + 56 }));
+  const TY0 = 46.7, TY1 = 48.9;
+  for (let x = TY0; x < TY1; x += .12) cue(x, 'key');
+  cue(49.05, 'send'); cue(50.3, 'ding'); cue(50.9, 'blip');
+  function sE(t) {
+    const ls = lines('#e-t'); rev(ls[0], t, 45.95); rev(ls[1], t, 46.1); rev(ls[2], t, 46.25);
+    const kc = eo(k01(t, 45.9, .8));
+    $('#e-chat').style.transform = `translateY(${((1 - kc) * 120).toFixed(1)}px)`; $('#e-chat').style.opacity = Math.min(1, kc * 2).toFixed(3);
+    // le message s'écrit, puis part
+    const n = Math.round(ask.length * clamp((t - TY0) / (TY1 - TY0)));
+    $('#e-typed').textContent = [...ask].slice(0, n).join('');
+    const ko = k01(t, 46.45, .4);
+    $('#e-out').style.opacity = Math.min(1, ko * 3).toFixed(3); $('#e-out').style.transform = `scale(${(.92 + .08 * eob(ko)).toFixed(3)})`; $('#e-out').style.transformOrigin = RTL ? '0 100%' : '100% 100%';
+    $('#e-out .tm').style.opacity = t >= 49.05 ? 1 : 0;
+    $('#e-ticks').classList.toggle('read', t >= 50.0);
+    // la réponse de la boutique
+    const oh = $('#e-out').offsetHeight;
+    place($('#e-in'), { top: HDH + 34 + oh + 26 });
+    $('#e-reply').textContent = reply;
+    const ki = k01(t, 50.3, .45);
+    $('#e-in').style.opacity = Math.min(1, ki * 3).toFixed(3); $('#e-in').style.transform = `scale(${(.9 + .1 * eob(ki)).toFixed(3)})`; $('#e-in').style.transformOrigin = '0 100%';
+    rev($('#e-line span'), t, 50.9, .6);
+  }
+
+  /* ================= F. fin (52,8 – 60 s) ================= */
+  addSweep(52.8, $('#sF'));
+  $('#f-img').src = `img/${L ? 'wall-square' : 'wall-portrait'}.jpg`;
+  place($('#f-box'), { top: pick(170, 250, 520) });
+  $('#f-name').style.fontSize = pick(230, 200, 250) + 'px';
+  $('#f-tag1').style.fontSize = $('#f-tag2').style.fontSize = pick(64, 56, 70) + 'px';
+  $('#f-box .kick').style.cssText += `;font-size:${pick(22, 19, 22)}px;margin-bottom:${pick(26, 22, 30)}px`;
+  $('#f-box .kick > span').style.justifyContent = 'center';
+  $$('#f-langs .fl').forEach(e => Object.assign(e.style, { height: pick('54px', '52px', '60px'), padding: '0 24px', border: '1.5px solid rgba(28,23,20,.25)', background: 'rgba(239,231,218,.55)', font: `500 ${pick(24, 22, 26)}px/1 var(--sans)` }));
+  $('#f-demo').style.bottom = pick(36, 40, 70) + 'px';
+  cue(53.3, 'sparkle'); cue(57.6, 'impact');
+  function sF(t) {
+    $('#f-img').style.transform = `scale(${lerp(1.08, 1, eo(k01(t, 52.8, 7))).toFixed(4)})`;
+    rev($('#f-box .kick > span'), t, 53.2); rev($('#f-name'), t, 53.35, .75); rev($('#f-tag1 span'), t, 53.9, .6); rev($('#f-tag2 span'), t, 54.1, .6);
+    $$('#f-langs .fl').forEach((e, i) => pop(e, t, 54.9 + i * .12, .45));
+    rev($('#f-url span'), t, 55.6, .6);
+    $('#f-demo').style.opacity = (eo(k01(t, 56.0, .6)) * .9).toFixed(3);
+  }
+
+  const SCENES = [[sA, '#sA', 0, 19.2 + SWD], [sB, '#sB', 19.2, 24.0 + SWD], [sC, '#sC', 24.0, 33.6 + SWD], [sD, '#sD', 33.6, 45.6 + SWD], [sE, '#sE', 45.6, 52.8 + SWD], [sF, '#sF', 52.8, 60.1]]
+    .map(([fn, sel, a, b]) => ({ fn, el: $(sel), a, b }));
+  window.render = t => {
+    const waits = [];
+    for (const s of SCENES) { const on = t >= s.a && t < s.b; s.el.style.visibility = on ? 'visible' : 'hidden'; if (on) { const r = s.fn(t); if (r) waits.push(r); } }
+    sweeps(t);
+    // les canvas se dessinent une fois les images des vidéos prêtes
+    return Promise.all(waits).then(() => {
+      if (t < 19.2 + SWD && t >= VA - .05) sAdraw(t);
+      if (t >= 24.0 && t < 33.6 + SWD) sCdraw(t);
+      return true;
+    });
+  };
+  window.CUES = CUES.sort((a, b) => a[0] - b[0]);
+  window.META = { W, H, fps: 30, duration: 60, beat: .6 };
+  const fonts = ['400 100px "Instrument Serif"', 'italic 400 100px "Instrument Serif"', '400 40px "Geist"', '500 40px "Geist"', '600 40px "Geist"', '500 40px "Plex Arabic"'];
+  Promise.all([...fonts.map(f => document.fonts.load(f, 'Tiziri éà عربي')), vidReady, ...[...document.images].map(i => i.decode().catch(() => {})), ...[...Object.values(still), ...Object.values(fin)].map(i => i.decode().catch(() => {}))])
+    .then(() => document.fonts.ready).then(() => window.render(0)).then(() => { window.READY = true; });
+})();
+</script>
+</body>
+</html>

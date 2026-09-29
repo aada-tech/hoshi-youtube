@@ -1,0 +1,62 @@
+{
+ "voix": "Gemini TTS (gemini-3.8-flash-tts), voix Sulafat",
+ "consigne": "[warm] [elegant] [smiling]",
+ "style": "Warm, elegant and confident voice for a premium fashion boutique advert: smooth, natural and unhurried, with a gentle smile, and a clear pause between sentences.",
+ "vitesse": 1.0,
+ "lignes": [
+  {
+   "t": 0.5,
+   "fichier": "01.wav",
+   "texte": "Una foto, hecha en la tienda.",
+   "duree": 3.07
+  },
+  {
+   "t": 5.1,
+   "fichier": "02.wav",
+   "texte": "Recortamos la prenda, sin cambiar nada.",
+   "duree": 8.7
+  },
+  {
+   "t": 14.1,
+   "fichier": "03.wav",
+   "texte": "Luego Elle, nuestra maniquí de madera, se la pone… y la prenda cobra vida.",
+   "duree": 6.39
+  },
+  {
+   "t": 20.79,
+   "fichier": "04.wav",
+   "texte": "Tiziri. Tu tienda de moda en Tigzirt, en línea.",
+   "duree": 3.53
+  },
+  {
+   "t": 24.62,
+   "fichier": "05.wav",
+   "texte": "Cada prenda de la tienda se presenta en movimiento.",
+   "duree": 3.14
+  },
+  {
+   "t": 34.1,
+   "fichier": "06.wav",
+   "texte": "En la web: el probador, el desfile y cada prenda desde todos los ángulos.",
+   "duree": 5.15
+  },
+  {
+   "t": 43.3,
+   "fichier": "07.wav",
+   "texte": "En francés, árabe, inglés y español.",
+   "duree": 4.07
+  },
+  {
+   "t": 47.67,
+   "fichier": "08.wav",
+   "texte": "¿Te gusta una prenda? Escríbenos por WhatsApp: recógela en la tienda o te la enviamos.",
+   "duree": 5.43
+  },
+  {
+   "t": 53.6,
+   "fichier": "09.wav",
+   "texte": "Tiziri. Lo que ves aquí, lo encuentras en la tienda.",
+   "duree": 3.88
+  }
+ ]
+}
