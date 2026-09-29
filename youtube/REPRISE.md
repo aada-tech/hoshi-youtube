@@ -86,5 +86,5 @@ Images de référence : `livrables/bugs-billot/` (avant / après).
 
 Conséquences pour les vidéos, à traiter après l'export du site :
 - Les 4 visites Billot (FR, EN, ES, AR, filmées le 29/09 à 05:32) montrent probablement les deux bugs : à refilmer. Le minutage ne change pas (seule la dernière scène de la réservation est plus courte), donc on peut garder la même bande-son.
-- La promo Billot du portfolio : vérifier si elle réutilise des captures du tiroir ou de la réservation (dossier promo de Billot non copié dans ce dépôt) ; si oui, refaire les captures depuis le site corrigé.
+- La promo Billot du portfolio n'est pas concernée (confirmé par le propriétaire : elle n'utilise pas ces images). Seules les 4 visites YouTube sont à refaire.
 
