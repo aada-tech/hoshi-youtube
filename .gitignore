@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+
+# Rendus et caches recréés par les scripts (youtube/tools/visit.py, thumbs.py, narrate.py)
+youtube/*/work/
+youtube/thumbs-work/
+
+# Vidéos : publiées sur YouTube, trop lourdes pour Git
+*.mp4
+*.mov
+
+# Clés et secrets : jamais dans le dépôt
+.env
+*.key
+
+.DS_Store
+node_modules/
