@@ -1,0 +1,18 @@
+diff --git a/assets/js/portfolio.js b/assets/js/portfolio.js
+index e798155..7bf8bee 100644
+--- a/assets/js/portfolio.js
++++ b/assets/js/portfolio.js
+@@ -16,6 +16,13 @@
+       note.textContent = b.dataset.note;
+     }));
+   });
++  // téléphone en portrait : les vidéos s'ouvrent directement au format vertical (preload="none" : rien n'est téléchargé avant la lecture)
++  if (window.matchMedia('(max-width: 700px) and (orientation: portrait)').matches) {
++    document.querySelectorAll('.proj').forEach(el => {
++      const b = el.querySelector('.vtabs button[data-f="916"]');
++      if (b) b.click();
++    });
++  }
+   // un choix de langue explicite l'emporte ensuite sur la langue du navigateur
+   document.querySelectorAll('.lang-switch a').forEach(a => a.addEventListener('click', () => {
+     try { localStorage.setItem('lang', a.getAttribute('hreflang')); } catch (e) { /* stockage indisponible */ }
