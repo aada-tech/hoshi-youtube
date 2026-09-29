@@ -66,3 +66,10 @@ changements de visibilité peuvent être bloqués par le mode auto : les laisser
 5. **Hoshi** : le propriétaire supprime les playlists en trop (Uko EN, Uko ES, Village).
 6. **Plus tard** : le kabyle n'est pas pris en charge par Gemini ; pistes Hugging Face : OmniVoice, Matoub-82M,
    MMS-TTS-kab (à tester). Idées d'usage des 200 $ de crédit Google Cloud à rediscuter avec le propriétaire.
+
+## Journal de la session cloud (29 septembre 2026)
+
+- Promo arabe de Tiziri rendue en 16:9, 4:5 et 9:16 : `livrables/tiziri-promo-ar/` (60 s, voix arabe Sulafat déjà générée, musique). Le contrôle de la voix par transcription reste à faire (clé Gemini absente de la session).
+- Rendu sous Linux : `render.py` lit `CHROME_BIN` et `FFMPEG_BIN` ; le Chromium d'ici ne lit pas le H.264, donc `sh webm.sh` recode `vid/*.mp4` en `vid/*.webm` et on lance avec `PROMO_VID_EXT=webm`. Ordre : `python3 audio.py --voix ar`, puis `python3 _tools/promo_batch.py sources/boutique-tigzirt/promo tiziri ar 169,45,916`.
+- Constat portfolio (hoshuko.github.io) : seules les promos de Tiziri ont une voix off (commit e1d3597) ; Billot, Tafat, Nacre et Lalla Warda sont en musique seule. Le portfolio ouvre toujours sur l'onglet « Paysage » (16:9), sans choix automatique du format sur téléphone (`assets/js/portfolio.js`).
+

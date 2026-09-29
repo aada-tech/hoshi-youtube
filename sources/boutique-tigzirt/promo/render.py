@@ -2,11 +2,15 @@
 usage : python3 render.py 45|916 [--stills t1,t2,...] [--fps 30]"""
 import subprocess, os, sys, json, base64, time, tempfile
 HERE = os.path.dirname(os.path.abspath(__file__))
-CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
-FFMPEG = '/opt/homebrew/bin/ffmpeg'
+CHROME = os.environ.get('CHROME_BIN', '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome')
+FFMPEG = os.environ.get('FFMPEG_BIN', '/opt/homebrew/bin/ffmpeg')
+SANDBOX = ['--no-sandbox'] if hasattr(os, 'geteuid') and os.geteuid() == 0 else []  # Chrome refuse le bac à sable en root (VM, conteneur)
 
 # remplacements appliqués aux versions traduites de compo.html
 EXTRA = []
+# Chromium sans codecs propriétaires (Linux, conteneur) ne lit pas le H.264 : PROMO_VID_EXT=webm lit vid/*.webm (voir webm.sh)
+if os.environ.get('PROMO_VID_EXT'):
+    EXTRA.append(('vid/${id}.mp4', 'vid/${{id}}.' + os.environ['PROMO_VID_EXT']))  # accolades doublées : format()
 
 class CDP:
     def __init__(self):
@@ -15,7 +19,7 @@ class CDP:
             os.dup2(r1, 3); os.dup2(w2, 4)
         self.tmp = tempfile.mkdtemp()
         self.p = subprocess.Popen([CHROME, '--headless=new', '--remote-debugging-pipe', '--disable-gpu', '--hide-scrollbars', '--allow-file-access-from-files',
-                                   '--no-first-run', '--no-default-browser-check', '--force-device-scale-factor=1', f'--user-data-dir={self.tmp}', 'about:blank'],
+                                   '--no-first-run', '--no-default-browser-check', '--force-device-scale-factor=1', *SANDBOX, f'--user-data-dir={self.tmp}', 'about:blank'],
                                   pass_fds=(3, 4), preexec_fn=pre, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         os.close(r1); os.close(w2)
         self.w = os.fdopen(w1, 'wb', buffering=0); self.r = os.fdopen(r2, 'rb', buffering=0)
